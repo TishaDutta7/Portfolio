@@ -2369,6 +2369,9 @@ window.addEventListener('error', function(){ document.documentElement.classList.
     img.addEventListener('error',()=>{
       const src=img.getAttribute('src')||'';
       if(src.endsWith('.webp')){ img.src=src.replace(/\.webp$/i,'.jpg'); }
+      else if(src.endsWith('.jpg')){ img.src=src.replace(/\.jpg$/i,'.webp'); }
+      else if(src.endsWith('.jpeg')){ img.src=src.replace(/\.jpeg$/i,'.jpg'); }
+      else if(src.endsWith('.png')){ img.src=src.replace(/\.png$/i,'.jpg'); }
     });
   });
 })();
