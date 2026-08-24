@@ -21,7 +21,7 @@
 }
 .hero-luxury .hero-bg-photo{
   position:absolute;inset:-7%;z-index:-5;
-  background-image:url("assets/portrait/tisha-dutta.webp");
+  background-image:url("assets/portrait/hero-bg.jpg");
   background-size:cover;background-position:center 28%;
   filter:blur(28px) saturate(.78) brightness(.34);
   transform:scale(1.08);
@@ -131,6 +131,7 @@
   --rg:#C7A56A;
   --rg-l:#E0C58E;
   --rg-p:#F0DDB2;
+  --rg-d:#7A552F;
   --cream:#F3EEE5;
   --cream-2:#FAF8F3;
   --off:#F7F4EE;
@@ -526,11 +527,6 @@ nav{
 .p-ph-txt{font-family:"Montserrat",sans-serif;font-size:.44rem;font-weight:400;letter-spacing:.1em;color:#444;text-align:center;padding:0 .5rem;line-height:1.65}
 .plbl strong{display:block;font-family:"Montserrat",sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
 .plbl span{display:block;font-family:"Montserrat",sans-serif;font-size:.5rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-top:.18rem}
-.cp-upload-note{max-width:520px;margin:0 auto;text-align:center;padding:1.7rem 2rem;border:1px solid var(--gl);background:rgba(184,134,90,.03)}
-.cp-upload-note p{font-family:"Montserrat",sans-serif;font-size:.7rem;font-weight:300;color:var(--mu);line-height:1.8;margin-bottom:1rem}
-.cp-upload-note strong{font-weight:600;color:var(--cream)}
-.upload-btn{display:inline-flex;align-items:center;gap:.55rem;padding:.65rem 1.7rem;background:var(--rg);color:var(--dark);font-family:"Montserrat",sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .3s;border:none}
-.upload-btn:hover{background:var(--rg-p)}
 #vup{display:none}
 
 /* ─── SERVICES ─── */
@@ -634,8 +630,11 @@ nav{
 .proj-thumb-in{
   width:100%;height:100%;
   display:flex;align-items:center;justify-content:center;
-  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:1.7rem;
-  color:rgba(184,134,90,.12);letter-spacing:.1em;
+  padding:1.5rem;text-align:center;text-wrap:balance;overflow-wrap:anywhere;
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;
+  font-size:clamp(1.15rem,2.2vw,1.7rem);line-height:1.15;
+  color:var(--rg-l);letter-spacing:.04em;
+  text-shadow:0 2px 18px rgba(0,0,0,.85);
 }
 .proj-meta{padding:1.4rem}
 .proj-cat{
@@ -1001,8 +1000,6 @@ section{position:relative}
 .hero-audience span{color:var(--rg);padding:0 .55rem}
 .fcta-accent{color:var(--rg-l);font-family:"Cormorant Garamond",serif;font-style:italic;text-transform:none;letter-spacing:0}
 .fcta-sub{max-width:760px!important;font-size:.9rem!important;line-height:1.9!important;color:rgba(244,234,216,.58)!important}
-.video-proof-note{max-width:780px;margin:0 auto 1.5rem;text-align:center;font-family:"Montserrat",sans-serif;font-size:.62rem;line-height:1.8;color:var(--mu);padding:1rem 1.2rem;border:1px solid rgba(199,165,106,.18);background:rgba(199,165,106,.035)}
-.video-proof-note strong{color:var(--dark);font-weight:700}
 .results-proofline{margin:1.7rem auto 0;max-width:900px;text-align:center;font-family:"Montserrat",sans-serif;font-size:.56rem;line-height:1.8;letter-spacing:.06em;color:var(--mu)}
 .results-proofline span{color:var(--rg);font-weight:800;font-size:.72rem}
 .exp-card,.svc-card,.why-card,.testi-card,.proof-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
@@ -1041,6 +1038,118 @@ body{background:#0b0807;color:var(--cream)}
 #projects{background:#120e0c}
 #final-cta{background:#100b09}
 footer{background:#080605}
+
+/* ACCESSIBLE PALETTE CONTRAST
+   Deep bronze is used on cream surfaces; cream and pale gold are used on dark surfaces. */
+.nav-links a{color:rgba(243,238,229,.82)}
+
+.hero-luxury .hero-tagline{color:rgba(243,238,229,.82)}
+.hero-luxury .hero-audience{color:rgba(243,238,229,.76)}
+.hero-luxury .hstat-lbl{color:rgba(243,238,229,.76)}
+.hero-luxury .hero-proof-strip{color:rgba(243,238,229,.7)}
+
+#about .para{color:rgba(243,238,229,.78)}
+#about .about-proof small{color:rgba(243,238,229,.72)}
+#about .atag{color:rgba(243,238,229,.78);border-color:rgba(224,197,142,.34)}
+
+.marquee-wrap .mq-item{color:var(--mu2)}
+
+#experience .ey,
+#brands .ey,
+#services .ey,
+#how-i-work .ey,
+#toolkit .ey,
+#why .ey,
+#contact .about-eyebrow{color:var(--rg-d)}
+#experience .ey::before,#experience .ey::after,
+#brands .ey::before,#brands .ey::after,
+#services .ey::before,#services .ey::after,
+#how-i-work .ey::before,#how-i-work .ey::after,
+#toolkit .ey::before,#toolkit .ey::after,
+#why .ey::before,#why .ey::after,
+#contact .about-eyebrow::before{background:var(--rg-d)}
+
+#experience .accent-gv,
+#brands .accent-gv,
+#services .accent-gv,
+#how-i-work .accent-gv,
+#toolkit .accent-gv,
+#why .accent-gv,
+#contact .contact-heading .accent{color:var(--rg-d)!important}
+
+#experience .exp-num,
+#services .svc-num{color:rgba(122,85,47,.48)}
+#experience .exp-role,
+#services .s-sub,
+#services .svc-proof,
+#services .svc-diff{color:var(--rg-d)}
+#brands .brand-pill-logo{color:var(--rg-d)}
+#brands .brand-pill-cat{color:var(--mu2)}
+
+#content-portfolio .cp-hdr p{color:rgba(243,238,229,.78)!important}
+#content-portfolio .cp-filter{color:rgba(243,238,229,.8);border-color:rgba(224,197,142,.4)}
+#content-portfolio .cp-filter:hover{color:var(--cream);border-color:var(--rg-l)}
+#content-portfolio .plbl span{color:rgba(243,238,229,.72)}
+
+#how-i-work .sh-light,
+#toolkit .sh-light,
+#why .sh-light{color:var(--dark)!important}
+#how-i-work .hiw-num,
+#why .why-num{color:rgba(224,197,142,.58)}
+#how-i-work .hiw-desc,
+#why .why-desc{color:rgba(243,238,229,.78)}
+
+#toolkit .tk-cat-label{color:var(--rg-d)}
+#toolkit .tk-cat-label::after{background:linear-gradient(to right,rgba(122,85,47,.45),transparent)}
+#toolkit .tk-pill{background:rgba(255,255,255,.38);border-color:rgba(122,85,47,.28)}
+#toolkit .tk-pill-name{color:var(--mu2)}
+#toolkit .tk-pill:hover{background:rgba(255,255,255,.68);border-color:var(--rg-d)}
+#toolkit .tk-pill:hover .tk-pill-name{color:var(--rg-d)}
+
+#projects .proj-hdr .sh,
+#projects .proof-heading .sh{color:var(--cream)!important}
+#projects .proj-hdr p{color:rgba(243,238,229,.76)!important}
+#projects .ey{color:var(--rg-l)}
+#projects .ey::before,#projects .ey::after{background:var(--rg-l)}
+#projects .accent-gv{color:var(--rg-l)!important}
+#projects .proj-cat,
+#projects .proj-btn,
+#projects .work-case-kicker{color:var(--rg-d)}
+#projects .proj-desc{color:var(--mu2);font-weight:400}
+#projects .proj-btn:hover{color:var(--dark)}
+
+#results .results-hdr .sh{color:var(--cream)!important}
+#results .results-hdr .ey{color:var(--rg-l)}
+#results .results-hdr .ey::before,#results .results-hdr .ey::after{background:var(--rg-l)}
+#results .results-hdr .accent-gv{color:var(--rg-l)!important}
+#results .res-num{color:var(--rg-d)}
+#results .res-suf{color:var(--rg-d)}
+#results .res-lbl{color:var(--mu2)}
+#results .results-proofline,
+#results .results-disclaimer{color:rgba(243,238,229,.76)}
+
+#final-cta .fcta-sub{color:rgba(243,238,229,.8)!important}
+#final-cta .fcta-quote{color:rgba(224,197,142,.72)}
+
+#contact .contact-body,
+#contact .contact-link-row,
+#contact .form-label{color:var(--mu2)}
+#contact .contact-link-row:hover,
+#contact .contact-link-ico{color:var(--rg-d)}
+#contact .form-input::placeholder{color:var(--mu2);opacity:.82}
+
+footer .footer-logo{color:rgba(243,238,229,.74)}
+footer .footer-copy,
+footer .footer-tagline{color:rgba(243,238,229,.68)}
+
+/* FINAL GITHUB PAGES MEDIA HARDENING */
+.hero-luxury .hero-bg-photo{background-image:url("assets/portrait/hero-bg.jpg");background-repeat:no-repeat;}
+.hero-portrait{object-fit:contain;object-position:center bottom;}
+.hero-visual{min-height:100%;}
+img{max-width:100%;}
+.portfolio-video{background:#111;}
+.portfolio-video[poster]{background-size:cover;background-position:center;}
+@media(max-width:900px){.hero-portrait{object-fit:contain;object-position:center bottom;}}
 </style>
 </head>
 <body>
@@ -1086,12 +1195,12 @@ footer{background:#080605}
         <div class="hstat"><span class="hstat-num">20K<span>+</span></span><span class="hstat-lbl">Organic Instagram<br>Growth</span></div>
         <div class="hstat"><span class="hstat-num">100<span>+</span></span><span class="hstat-lbl">UGC Videos<br>Delivered</span></div>
         <div class="hstat"><span class="hstat-num">267K<span>+</span></span><span class="hstat-lbl">Content<br>Views</span></div>
-        <div class="hstat"><span class="hstat-num">0 → 800</span><span class="hstat-lbl">LinkedIn<br>Growth</span></div>
+        <div class="hstat"><span class="hstat-num">0 → 6K</span><span class="hstat-lbl">LinkedIn<br>Growth</span></div>
       </div>
     </div>
     <div class="hero-visual" aria-label="Tisha Dutta portrait">
       <div class="hero-portrait-glow"></div>
-      <img src="assets/portrait/tisha-dutta.webp" alt="Tisha Dutta" class="hero-portrait" fetchpriority="high" decoding="async">
+      <img src="assets/portrait/tisha-dutta.png" alt="Tisha Dutta" class="hero-portrait" fetchpriority="high" decoding="async">
       <div class="hero-portrait-vignette"></div>
       <div class="hero-scroll">SCROLL <span>↓</span></div>
     </div>
@@ -1160,7 +1269,7 @@ footer{background:#080605}
   </div>
   <div class="reveal d2">
     <div class="about-frame">
-      <img src="assets/portrait/tisha-dutta.webp" alt="Tisha Dutta — Social Media Manager and Content Strategist" loading="eager" decoding="async">
+      <img src="assets/portrait/tisha-dutta.png" alt="Tisha Dutta — Social Media Manager and Content Strategist" loading="eager" decoding="async">
       <div class="about-badge">Available for Work</div>
     </div>
   </div>
@@ -1306,10 +1415,10 @@ footer{background:#080605}
     </div>
   </div>
   <div class="brand-capabilities">
-    <article class="brand-cap-card reveal d1"><img src="assets/work/nextnation-bts.webp" alt="Content production and shoot setup" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">01 · CONTENT CREATION</div><div class="brand-cap-title">From idea to shoot</div><div class="brand-cap-copy">Scripts, concepts, on-camera execution and social-first assets.</div></div></article>
-    <article class="brand-cap-card reveal d2"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Content strategy and social performance" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">02 · CONTENT STRATEGY</div><div class="brand-cap-title">Build the system</div><div class="brand-cap-copy">Pillars, calendars, formats and campaigns built around the audience.</div></div></article>
-    <article class="brand-cap-card reveal d3"><img src="assets/work/nextnation-instagram.webp" alt="Social media management work" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">03 · SOCIAL MANAGEMENT</div><div class="brand-cap-title">Run the presence</div><div class="brand-cap-copy">Publishing, channel management, community touchpoints and consistency.</div></div></article>
-    <article class="brand-cap-card reveal d4"><img src="assets/proof/my-performance-dashboard.webp" alt="Performance analytics dashboard" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">04 · ANALYTICS &amp; GROWTH</div><div class="brand-cap-title">Measure what moves</div><div class="brand-cap-copy">Track reach, viewers, content performance and decisions that improve the next cycle.</div></div></article>
+    <article class="brand-cap-card reveal d1"><img src="assets/work/nextnation-bts.jpg" alt="Content production and shoot setup" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">01 · CONTENT CREATION</div><div class="brand-cap-title">From idea to shoot</div><div class="brand-cap-copy">Scripts, concepts, on-camera execution and social-first assets.</div></div></article>
+    <article class="brand-cap-card reveal d2"><img src="assets/work/tranzyt-instagram-insights.jpg" alt="Content strategy and social performance" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">02 · CONTENT STRATEGY</div><div class="brand-cap-title">Build the system</div><div class="brand-cap-copy">Pillars, calendars, formats and campaigns built around the audience.</div></div></article>
+    <article class="brand-cap-card reveal d3"><img src="assets/work/nextnation-instagram.jpg" alt="Social media management work" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">03 · SOCIAL MANAGEMENT</div><div class="brand-cap-title">Run the presence</div><div class="brand-cap-copy">Publishing, channel management, community touchpoints and consistency.</div></div></article>
+    <article class="brand-cap-card reveal d4"><img src="assets/proof/my-performance-dashboard.jpg" alt="Performance analytics dashboard" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">04 · ANALYTICS &amp; GROWTH</div><div class="brand-cap-title">Measure what moves</div><div class="brand-cap-copy">Track reach, viewers, content performance and decisions that improve the next cycle.</div></div></article>
   </div>
 </section>
 
@@ -1342,11 +1451,6 @@ footer{background:#080605}
     <div class="phone-wrap reveal d4" data-cat="ugc brand client"><div class="pf" ><div class="p-notch"></div><video id="v8" class="portfolio-video" src="videos/grk-ads-offer.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/grk-ads-offer.jpg" data-file="grk-ads-offer.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">UGC</div></div></div><div class="plbl"><strong>GRK Ads · Offer Creative</strong><span>GRK Ads &bull; UGC-style</span></div></div>
   </div>
   
-  <div class="video-proof-note reveal"><strong>Selected client content.</strong> Videos autoplay muted and loop when visible. Click any video to pause or play.</div>
-  <div class="cp-upload-note reveal">
-    <p>The selected videos are already loaded. These videos are embedded in this portfolio, so they play directly wherever the HTML is opened.</p>
-    <button class="upload-btn" ><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>Upload Video</button>
-  </div>
 </section>
 
 <div class="div"></div>
@@ -1490,8 +1594,8 @@ footer{background:#080605}
   <div class="work-case-grid">
     <article class="work-case reveal d1">
       <div class="work-case-media">
-        <div class="work-shot"><img src="assets/work/nextnation-instagram.webp" alt="NextNation Instagram page handled by Tisha" loading="lazy"></div>
-        <div class="work-shot"><img src="assets/work/nextnation-bts.webp" alt="Behind the scenes of a NextNation content shoot" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/nextnation-instagram.jpg" alt="NextNation Instagram page handled by Tisha" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/nextnation-bts.jpg" alt="Behind the scenes of a NextNation content shoot" loading="lazy"></div>
       </div>
       <div class="work-case-body">
         <div class="work-case-kicker">Social Media Intern · NextNation</div>
@@ -1508,8 +1612,8 @@ footer{background:#080605}
     </article>
     <article class="work-case reveal d2">
       <div class="work-case-media">
-        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram Insights dashboard" loading="lazy"></div>
-        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram performance proof" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.jpg" alt="Tranzyt Instagram Insights dashboard" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.jpg" alt="Tranzyt Instagram performance proof" loading="lazy"></div>
       </div>
       <div class="work-case-body">
         <div class="work-case-kicker">Sub-brand / Project · NextNation</div>
@@ -1528,10 +1632,10 @@ footer{background:#080605}
     <div class="sh" style="color:var(--dark)">SHOW THE <span class="accent-gv">Receipts</span></div>
   </div>
   <div class="proof-grid">
-    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/proof/my-performance-dashboard.webp" alt="Tisha social media performance dashboard showing 267,018 views" loading="lazy"></div><div class="proof-caption">My Performance Dashboard · 267K+ Views</div></div>
-    <div class="proof-card reveal d2"><div class="proof-media"><img src="assets/work/nextnation-instagram.webp" alt="NextNation Instagram page proof" loading="lazy"></div><div class="proof-caption">NextNation · Instagram Presence</div></div>
-    <div class="proof-card reveal d3"><div class="proof-media"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram Insights proof" loading="lazy"></div><div class="proof-caption">Tranzyt · Instagram Insights</div></div>
-    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/work/nextnation-bts.webp" alt="Behind the scenes content shoot setup" loading="lazy"></div><div class="proof-caption">Behind the Scenes · Shoot Execution</div></div>
+    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/proof/my-performance-dashboard.jpg" alt="Tisha social media performance dashboard showing 267,018 views" loading="lazy"></div><div class="proof-caption">My Performance Dashboard · 267K+ Views</div></div>
+    <div class="proof-card reveal d2"><div class="proof-media"><img src="assets/work/nextnation-instagram.jpg" alt="NextNation Instagram page proof" loading="lazy"></div><div class="proof-caption">NextNation · Instagram Presence</div></div>
+    <div class="proof-card reveal d3"><div class="proof-media"><img src="assets/work/tranzyt-instagram-insights.jpg" alt="Tranzyt Instagram Insights proof" loading="lazy"></div><div class="proof-caption">Tranzyt · Instagram Insights</div></div>
+    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/work/nextnation-bts.jpg" alt="Behind the scenes content shoot setup" loading="lazy"></div><div class="proof-caption">Behind the Scenes · Shoot Execution</div></div>
   </div>
   <div class="proj-grid" id="projectsGrid" style="margin-top:4rem">
     <!-- Additional projects rendered by JS from data array below -->
@@ -1701,9 +1805,9 @@ footer{background:#080605}
         Tell me what you&apos;re building — brand, business, founder profile or personal brand — and I&apos;ll help map the next move.
       </p>
       <div class="contact-links reveal d3">
-        <a href="mailto:tishadutta@example.com" class="contact-link-row"><div class="contact-link-ico">@</div>tishadutta@example.com</a>
-        <a href="https://www.linkedin.com/in/tisha-dutta-/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">in</div>linkedin.com/in/tishadutta</a>
-        <a href="https://www.instagram.com/tisha.dutta_/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">ig</div>@tishadutta</a>
+        <a href="mailto:tishadutta7320@gmail.com" class="contact-link-row"><div class="contact-link-ico">@</div>tishadutta7320@gmail.com</a>
+        <a href="https://www.linkedin.com/in/tishadutta/" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">in</div>linkedin.com/in/tishadutta</a>
+        <a href="https://www.instagram.com/tisha_duttaa/?hl=en" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">ig</div>@tisha_duttaa</a>
       </div>
     </div>
 
@@ -1814,9 +1918,9 @@ footer{background:#080605}
   <div class="footer-tagline">Strategy. Content. Growth.</div>
   <div class="footer-copy">&copy; 2025 Tisha Dutta &middot; Bengaluru, India</div>
   <div class="social-row">
-    <a href="https://www.linkedin.com/in/tisha-dutta-/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="social-btn">in</a>
-    <a href="https://www.instagram.com/tisha.dutta_/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="social-btn">ig</a>
-    <a href="mailto:tishadutta@example.com" class="social-btn">@</a>
+    <a href="https://www.linkedin.com/in/tishadutta/" target="_blank" rel="noopener noreferrer" class="social-btn">in</a>
+    <a href="https://www.instagram.com/tisha_duttaa/?hl=en" target="_blank" rel="noopener noreferrer" class="social-btn">ig</a>
+    <a href="mailto:tishadutta7320@gmail.com" class="social-btn">@</a>
   </div>
 </footer>
 
@@ -1831,7 +1935,7 @@ footer{background:#080605}
 
 function doPost(e) {
   try {
-    const SPREADSHEET_ID = "17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA";
+    const SPREADSHEET_ID = "1UGTBTasvxtcDQ3B7ZChI_Mdjf7bhvuhc7GBiKLArE14";
     const SHEET_NAME = "Form Responses";
 
     const data = JSON.parse(e.postData.contents);
@@ -1904,14 +2008,14 @@ function doGet(e) {
    Step 3: Copy the Web App URL
    Step 4: Paste it below replacing PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
    ===================================================== */
-const GOOGLE_APPS_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxhr3wPWXJ3qPfR-dBLk30r42BTaAkGAeFBqRoYG9c8TuREh3Ve-FfLKiqD0VRY9JeX9A/exec";
-/* YOUR GOOGLE SHEET ID: 17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA
-   Sheet URL: https://docs.google.com/spreadsheets/d/17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA/edit
+const GOOGLE_APPS_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwd46cfFVJqOl4uiZISLMfhW-1SZi9fBuYH4Cy7nw2tvRgfKhB9_8gFDLHCDNrVhOua6g/exec";
+/* YOUR GOOGLE SHEET ID: 1UGTBTasvxtcDQ3B7ZChI_Mdjf7bhvuhc7GBiKLArE14
+   Sheet URL: https://docs.google.com/spreadsheets/d/1UGTBTasvxtcDQ3B7ZChI_Mdjf7bhvuhc7GBiKLArE14/edit
    ─── HOW TO CONNECT ───────────────────────────────────────
    1. Open Google Apps Script: https://script.google.com
    2. Create new project → paste the Apps Script code below
    3. In the script, the SPREADSHEET_ID is already set to your sheet:
-      const SPREADSHEET_ID = "17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA";
+      const SPREADSHEET_ID = "1UGTBTasvxtcDQ3B7ZChI_Mdjf7bhvuhc7GBiKLArE14";
    4. Click Deploy → New Deployment → Web App
       Execute as: Me | Who has access: Anyone
    5. Copy the Web App URL and paste it above (replacing PASTE_YOUR...)
@@ -2006,7 +2110,7 @@ function renderProjects() {
     <div class="proj-card reveal d${(i % 3) + 1}">
       <div class="proj-thumb">
         <div class="proj-thumb-in" style="background:linear-gradient(135deg,${['#1C0E07','#0E1610','#180E14','#1A1408','#0E1014','#18100E','#100E18','#0A1018','#140E0C'][i % 9]},var(--dark-3))">
-          ${p.title.slice(0,12)}
+          ${p.title}
         </div>
       </div>
       <div class="proj-meta">
@@ -2218,17 +2322,17 @@ form.addEventListener('submit', async function(e) {
     service,
     budget: form.budget.value,
     description,
-    preferred_contact: form.preferred_contact.value,
+    contactMethod: form.preferred_contact.value,
     additional: form.additional.value.trim(),
     timestamp: new Date().toISOString()
   };
 
   try {
+    const body = new URLSearchParams(payload);
     const res = await fetch(GOOGLE_APPS_SCRIPT_WEB_APP_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body
     });
     form.reset();
     showMsg('success', "Thank you! Your brief has been received. I\'ll get back to you soon.");
@@ -2245,10 +2349,29 @@ renderProjects();
 </script>
 
 
-<!-- Portfolio proof assets: /assets/work/nextnation-instagram.webp, nextnation-bts.jpeg, tranzyt-instagram-insights.jpeg; /assets/proof/my-performance-dashboard.webp -->
+<!-- Portfolio proof assets: /assets/work/nextnation-instagram.jpg, nextnation-bts.jpg, tranzyt-instagram-insights.jpg; /assets/proof/my-performance-dashboard.jpg -->
 
 <script>
 window.addEventListener('error', function(){ document.documentElement.classList.remove('reveal-ready'); document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); });
+</script>
+
+<script>
+(function(){
+  const vids=[...document.querySelectorAll('.portfolio-video')];
+  vids.forEach(v=>{
+    v.muted=true; v.setAttribute('muted',''); v.setAttribute('playsinline','');
+    const start=()=>v.play().catch(()=>{});
+    v.addEventListener('loadedmetadata',start,{once:true});
+    v.addEventListener('canplay',start,{once:true});
+    start();
+  });
+  document.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('error',()=>{
+      const src=img.getAttribute('src')||'';
+      if(src.endsWith('.webp')){ img.src=src.replace(/\.webp$/i,'.jpg'); }
+    });
+  });
+})();
 </script>
 </body>
 </html>
