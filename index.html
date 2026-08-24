@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tisha Dutta — Social Media Manager, Content Strategist & Personal Brand Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & BASE ─── */
+/* ─── REFINED LUXURY HERO ─── */
+#hero.hero-luxury{
+  min-height:calc(100vh - 72px);
+  padding:0 5vw;
+  background:#0b0807;
+  color:var(--cream);
+  display:block;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-luxury .hero-bg-photo{
+  position:absolute;inset:-7%;z-index:-5;
+  background-image:url("assets/portrait/tisha-dutta.webp");
+  background-size:cover;background-position:center 28%;
+  filter:blur(28px) saturate(.78) brightness(.34);
+  transform:scale(1.08);
+  opacity:.58;
+}
+.hero-luxury .hero-bg-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,#0b0807 0%,rgba(11,8,7,.86) 27%,rgba(11,8,7,.48) 58%,rgba(11,8,7,.22) 100%);
+}
+.hero-luxury::before{
+  content:"";position:absolute;inset:0;z-index:-4;
+  background:
+    radial-gradient(circle at 77% 44%,rgba(218,166,94,.22),transparent 22%),
+    radial-gradient(circle at 19% 75%,rgba(141,71,31,.16),transparent 27%),
+    linear-gradient(180deg,rgba(7,5,4,.12),rgba(7,5,4,.82));
+}
+.hero-luxury::after{
+  content:"";position:absolute;inset:0;z-index:-3;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.11) .55px,transparent .55px);
+  background-size:7px 7px;opacity:.08;mix-blend-mode:screen;
+}
+.hero-inner{
+  width:min(1220px,100%);min-height:calc(100vh - 72px);margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,1.03fr) minmax(360px,.97fr);
+  align-items:stretch;position:relative;
+}
+.hero-copy{align-self:center;max-width:700px;padding:7rem 0 6rem;position:relative;z-index:4}
+.hero-over-label{font-size:.62rem;letter-spacing:.34em;color:var(--rg-l);margin-bottom:1.15rem}
+.hero-luxury .hero-big{
+  margin:0;text-transform:uppercase;font-family:"Cormorant Garamond",serif;
+  font-weight:500;letter-spacing:-.035em;line-height:.82;color:#f5eee4;
+}
+.hero-line-one{font-size:clamp(3.5rem,6.7vw,7.2rem);animation:heroReveal .9s cubic-bezier(.2,.8,.2,1) .08s both}
+.hero-script{
+  display:block;font-family:"Great Vibes",cursive!important;text-transform:none!important;
+  font-size:clamp(4.5rem,7.8vw,8.2rem)!important;font-weight:400!important;
+  line-height:.7!important;color:var(--rg-l)!important;margin:.05em 0 .08em!important;
+  animation:heroReveal .95s cubic-bezier(.2,.8,.2,1) .18s both;
+}
+.hero-line-two,.hero-line-three{font-size:clamp(3.1rem,6vw,6.4rem);animation:heroReveal 1s cubic-bezier(.2,.8,.2,1) .26s both}
+.hero-line-three{font-size:clamp(2.45rem,4.7vw,5rem);color:var(--rg-p)!important;margin-top:.18rem!important}
+.hero-luxury .hero-tagline{
+  max-width:540px;font-size:.88rem;line-height:1.75;color:rgba(244,234,216,.68);font-style:normal;
+  margin:1.7rem 0 0;animation:heroReveal 1s ease .42s both;
+}
+.hero-luxury .hero-audience{margin-top:1.2rem;font-size:.56rem;letter-spacing:.27em;color:rgba(244,234,216,.62);animation:heroReveal 1s ease .5s both}
+.hero-luxury .hero-actions{justify-content:flex-start;margin-top:2rem;animation:heroReveal 1s ease .58s both}
+.hero-luxury .btn-fill,.hero-luxury .btn-wire{padding:.9rem 1.6rem;font-size:.56rem}
+.hero-luxury .btn-fill span,.hero-luxury .btn-wire span{margin-left:.6rem;font-size:.85rem}
+.hero-luxury .hero-stats{
+  max-width:720px;margin-top:2.6rem;padding-top:1.35rem;border-top:1px solid rgba(224,197,142,.18);
+  animation:heroReveal 1s ease .66s both;
+}
+.hero-luxury .hstat{text-align:left;padding:0 1.15rem 0 0;margin-right:1.15rem;border-right:1px solid rgba(224,197,142,.16)}
+.hero-luxury .hstat:last-child{border-right:0;margin-right:0}
+.hero-luxury .hstat-num{font-family:"Cormorant Garamond",serif;font-size:2.15rem;font-weight:600;color:#ead09a;letter-spacing:-.02em}
+.hero-luxury .hstat-num>span{font-family:inherit;font-size:1.25rem;color:var(--rg-l)}
+.hero-luxury .hstat-lbl{font-size:.45rem;line-height:1.55;letter-spacing:.12em;color:rgba(244,234,216,.52);margin-top:.45rem}
+.hero-visual{position:relative;min-height:100%;display:flex;align-items:flex-end;justify-content:center;z-index:2;overflow:visible}
+.hero-portrait-glow{position:absolute;width:78%;height:70%;right:6%;top:14%;background:radial-gradient(circle,rgba(217,159,83,.34),transparent 64%);filter:blur(18px);animation:heroGlow 7s ease-in-out infinite}
+.hero-portrait{position:relative;z-index:2;width:min(620px,95%);height:92%;object-fit:cover;object-position:center top;align-self:end;filter:saturate(.92) contrast(1.08) brightness(.92);mix-blend-mode:normal;mask-image:linear-gradient(to bottom,transparent 0%,black 5%,black 94%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 5%,black 94%,transparent 100%);animation:heroPortrait 1.2s cubic-bezier(.2,.8,.2,1) .18s both}
+.hero-portrait-vignette{position:absolute;z-index:3;inset:0;background:linear-gradient(90deg,rgba(11,8,7,.95) 0%,rgba(11,8,7,.12) 30%,transparent 58%),linear-gradient(0deg,rgba(11,8,7,.75),transparent 30%);pointer-events:none}
+.hero-scroll{position:absolute;right:0;bottom:2.2rem;z-index:5;font-size:.48rem;letter-spacing:.22em;color:rgba(244,234,216,.52);display:flex;gap:.7rem;align-items:center;writing-mode:vertical-rl}
+.hero-scroll span{font-size:.8rem;color:var(--rg-l)}
+.hero-light-beam{position:absolute;z-index:-1;width:58vw;height:12vh;background:linear-gradient(90deg,transparent,rgba(242,196,124,.13),transparent);filter:blur(18px);transform:rotate(-25deg);pointer-events:none}
+.beam-one{top:21%;left:-10%;animation:beamMove 12s ease-in-out infinite}
+.beam-two{top:42%;left:42%;animation:beamMove 15s ease-in-out -4s infinite reverse}
+.hero-grain{position:absolute;inset:-50%;z-index:6;opacity:.045;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");animation:grainShift .25s steps(2) infinite}
+.hero-luxury .hero-proof-strip{position:absolute;left:5vw;bottom:1.15rem;z-index:7;margin:0;max-width:720px;font-size:.46rem}
+@keyframes heroReveal{from{opacity:0;transform:translateY(26px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
+@keyframes heroPortrait{from{opacity:0;transform:translateY(34px) scale(1.03)}to{opacity:1;transform:none}}
+@keyframes heroGlow{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.08);opacity:1}}
+@keyframes beamMove{0%,100%{transform:translate3d(-4%,0,0) rotate(-25deg);opacity:.35}50%{transform:translate3d(10%,10%,0) rotate(-21deg);opacity:.8}}
+@keyframes grainShift{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+@media(max-width:900px){
+  #hero.hero-luxury{padding:0 1.25rem;min-height:auto}
+  .hero-inner{min-height:auto;grid-template-columns:1fr;}
+  .hero-copy{padding:6.2rem 0 1rem;max-width:none}
+  .hero-visual{min-height:58vh;margin-top:-2rem;align-items:flex-end}
+  .hero-portrait{width:min(560px,100%);height:70vh;max-height:650px}
+  .hero-portrait-vignette{background:linear-gradient(0deg,#0b0807 2%,rgba(11,8,7,.05) 45%,transparent 80%),linear-gradient(90deg,rgba(11,8,7,.45),transparent 60%)}
+  .hero-luxury .hero-stats{max-width:100%;gap:0}
+  .hero-luxury .hstat{min-width:25%;}
+  .hero-luxury .hero-proof-strip{position:relative;left:auto;bottom:auto;padding:0 0 1.6rem;max-width:none}
+  .hero-scroll{display:none}
+}
+@media(max-width:600px){
+  .hero-luxury .hero-big{letter-spacing:-.02em}
+  .hero-line-one{font-size:3.25rem}.hero-script{font-size:4.4rem!important}.hero-line-two{font-size:3rem}.hero-line-three{font-size:2.25rem}
+  .hero-luxury .hero-stats{display:grid;grid-template-columns:1fr 1fr;row-gap:1.25rem}
+  .hero-luxury .hstat{min-width:0;padding-right:.8rem;margin-right:.8rem}
+  .hero-luxury .hstat:nth-child(2){border-right:0;margin-right:0}
+  .hero-luxury .hstat:nth-child(3){border-top:1px solid rgba(224,197,142,.12);padding-top:1rem}
+  .hero-luxury .hstat:nth-child(4){border-top:1px solid rgba(224,197,142,.12);border-right:0;margin-right:0;padding-top:1rem}
+  .hero-visual{min-height:54vh}
+  .hero-portrait{height:62vh}
+}
+@media(prefers-reduced-motion:reduce){.hero-light-beam,.hero-grain,.hero-portrait-glow{animation:none}.hero-luxury *{animation-duration:.01ms!important}}
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#0A0A0C;
+  --dark-2:#111114;
+  --dark-3:#18181C;
+  --dark-4:#222227;
+  --rg:#C7A56A;
+  --rg-l:#E0C58E;
+  --rg-p:#F0DDB2;
+  --cream:#F3EEE5;
+  --cream-2:#FAF8F3;
+  --off:#F7F4EE;
+  --mu:#756F68;
+  --mu2:#4C4741;
+  --gl:rgba(199,165,106,0.18);
+  --gl2:rgba(199,165,106,0.08);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--off);
+  color:var(--dark);
+  font-family:"Montserrat",sans-serif;
+  font-weight:400;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* ─── CURSOR ─── */
+.cursor{
+  position:fixed;width:7px;height:7px;
+  background:var(--rg);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transition:transform .12s;top:0;left:0;
+}
+.cursor-ring{
+  position:fixed;width:26px;height:26px;
+  border:1px solid rgba(184,134,90,.55);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transition:width .2s,height .2s,border-color .2s;
+  transform:translate(-50%,-50%);top:0;left:0;
+}
+
+/* ─── NAV ─── */
+nav{
+  background:rgba(10,7,6,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:1.2rem 3.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  position:sticky;top:0;z-index:200;
+  border-bottom:1px solid var(--gl);
+}
+.nav-logo{
+  font-family:"Great Vibes",cursive;
+  font-size:1.6rem;color:var(--cream);
+  text-decoration:none;letter-spacing:.02em;
+}
+.nav-logo span{color:var(--rg-l)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{
+  font-family:"Montserrat",sans-serif;
+  font-size:.54rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,234,216,.5);text-decoration:none;
+  transition:color .3s;
+}
+.nav-links a:hover{color:var(--rg-p)}
+.nav-cta{
+  font-family:"Montserrat",sans-serif;
+  font-size:.54rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  padding:.5rem 1.3rem;
+  border:1px solid rgba(184,134,90,.4);
+  color:var(--rg-l);text-decoration:none;
+  transition:all .3s;
+}
+.nav-cta:hover{background:var(--rg);color:var(--dark);border-color:var(--rg)}
+
+/* ─── HERO ─── */
+#hero{
+  background:var(--dark);
+  padding:6rem 3.5rem 5rem;
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  min-height:92vh;
+}
+#hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 55% at 50% 100%,rgba(184,134,90,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-over-label{
+  font-family:"Montserrat",sans-serif;
+  font-size:.6rem;font-weight:700;letter-spacing:.45em;text-transform:uppercase;
+  color:var(--rg);margin-bottom:1.2rem;
+  animation:fadeUp .7s ease .05s both;position:relative;z-index:1;
+}
+.hero-name{
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(3.5rem,8.5vw,7.5rem);
+  color:var(--cream);line-height:1.05;
+  animation:fadeUp .75s ease .1s both;position:relative;z-index:1;
+}
+.hero-big{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(2.8rem,8.5vw,8rem);
+  font-weight:900;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--cream);
+  line-height:.88;
+  animation:fadeUp .8s ease .18s both;position:relative;z-index:1;
+}
+.hero-big.accent-line{color:var(--rg-p)}
+.hero-roles{
+  font-family:"Montserrat",sans-serif;
+  font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,234,216,.55);margin-top:1.4rem;
+  animation:fadeUp .85s ease .3s both;position:relative;z-index:1;
+}
+.hero-tagline{
+  font-family:"Montserrat",sans-serif;
+  font-size:.85rem;font-weight:300;font-style:italic;
+  color:rgba(244,234,216,.38);margin-top:.5rem;
+  animation:fadeUp .85s ease .36s both;position:relative;z-index:1;
+}
+.hero-actions{
+  display:flex;gap:1.1rem;justify-content:center;
+  margin-top:2.2rem;
+  animation:fadeUp .9s ease .5s both;position:relative;z-index:1;
+  flex-wrap:wrap;
+}
+.btn-fill{
+  font-family:"Montserrat",sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  padding:.88rem 2.4rem;background:var(--rg);color:var(--dark);
+  border:none;text-decoration:none;display:inline-block;
+  transition:background .3s,transform .2s;cursor:none;
+}
+.btn-fill:hover{background:var(--rg-p);transform:translateY(-2px)}
+.btn-wire{
+  font-family:"Montserrat",sans-serif;font-size:.6rem;font-weight:400;
+  letter-spacing:.24em;text-transform:uppercase;
+  padding:.88rem 2.4rem;background:transparent;color:var(--cream);
+  border:1px solid rgba(244,234,216,.2);text-decoration:none;display:inline-block;
+  transition:all .3s;
+}
+.btn-wire:hover{border-color:var(--rg);color:var(--rg-l);transform:translateY(-2px)}
+
+/* Hero stats */
+.hero-stats{
+  display:flex;gap:0;margin-top:3.5rem;
+  border-top:1px solid rgba(184,134,90,.1);padding-top:2.5rem;
+  animation:fadeUp .9s ease .64s both;position:relative;z-index:1;
+  width:100%;max-width:750px;flex-wrap:wrap;
+}
+.hstat{
+  flex:1;min-width:120px;text-align:center;
+  border-right:1px solid rgba(184,134,90,.09);padding:0 1.2rem;
+}
+.hstat:last-child{border-right:none}
+.hstat-num{
+  font-family:"Montserrat",sans-serif;font-size:1.7rem;font-weight:800;
+  color:var(--rg-l);display:block;line-height:1;
+}
+.hstat-lbl{
+  font-family:"Montserrat",sans-serif;font-size:.44rem;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(244,234,216,.32);margin-top:.4rem;display:block;
+  line-height:1.4;
+}
+
+/* ─── MARQUEE ─── */
+.marquee-wrap{
+  padding:1.1rem 0;overflow:hidden;
+  background:var(--cream-2);
+  border-top:1px solid var(--gl);border-bottom:1px solid var(--gl);
+}
+.marquee-track{
+  display:flex;gap:2.5rem;
+  animation:marq 30s linear infinite;white-space:nowrap;
+}
+.mq-item{
+  font-family:"Montserrat",sans-serif;font-size:.52rem;font-weight:600;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--mu);display:flex;align-items:center;gap:2.5rem;flex-shrink:0;
+}
+.mq-dot{width:3px;height:3px;border-radius:50%;background:var(--rg);flex-shrink:0}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── ABOUT ─── */
+#about{
+  display:grid;grid-template-columns:7fr 4fr;
+  background:var(--dark);padding:7rem 5rem;gap:5rem;align-items:start;
+}
+.about-text-col{}
+.about-eyebrow{
+  font-family:"Montserrat",sans-serif;font-size:.54rem;font-weight:700;
+  letter-spacing:.36em;text-transform:uppercase;
+  color:var(--rg);margin-bottom:1rem;
+  display:flex;align-items:center;gap:.7rem;
+}
+.about-eyebrow::before{content:"";display:block;width:.9rem;height:1px;background:var(--rg)}
+.about-main-h{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;
+  text-transform:uppercase;letter-spacing:.04em;
+  color:var(--cream);line-height:1.15;margin-bottom:2rem;
+}
+.para{
+  font-family:"Montserrat",sans-serif;font-size:.8rem;font-weight:300;
+  line-height:1.95;color:rgba(244,234,216,.58);margin-bottom:1rem;
+}
+.about-highlight{
+  font-family:"Montserrat",sans-serif;font-size:.75rem;font-weight:600;
+  color:var(--rg-l);margin-top:1.5rem;font-style:italic;
+  padding-left:1rem;border-left:2px solid var(--rg);line-height:1.6;
+}
+.about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.atag{
+  font-family:"Montserrat",sans-serif;font-size:.52rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.35rem .9rem;
+  border:1px solid rgba(184,134,90,.2);
+  color:var(--mu);
+  transition:border-color .3s,color .3s;
+}
+.atag:hover{border-color:var(--rg);color:var(--rg-l)}
+.about-proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin-top:1.7rem}
+.about-proof{padding:1rem 1rem .9rem;border:1px solid rgba(184,134,90,.16);background:rgba(255,255,255,.025)}
+.about-proof strong{display:block;font-family:"Montserrat",sans-serif;font-size:1.35rem;font-weight:800;color:var(--rg-l);line-height:1}
+.about-proof span{display:block;margin-top:.45rem;font-family:"Montserrat",sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--cream)}
+.about-proof small{display:block;margin-top:.25rem;font-family:"Montserrat",sans-serif;font-size:.48rem;font-weight:300;color:rgba(244,234,216,.38)}
+.about-frame{
+  width:100%;aspect-ratio:3/4;
+  background:var(--dark-2);border:1px solid var(--gl);
+  position:relative;overflow:hidden;border-radius:180px 180px 0 0;
+}
+.about-frame img{
+  width:100%;height:100%;object-fit:cover;
+  background:var(--dark-2);
+  object-position:center top;display:block;
+}
+.about-frame::after{
+  content:"";position:absolute;
+  top:10px;left:10px;right:-10px;bottom:-10px;
+  border:1px solid rgba(184,134,90,.14);
+  pointer-events:none;z-index:2;
+  border-radius:180px 180px 0 0;
+}
+.about-badge{
+  position:absolute;bottom:14px;right:-8px;
+  background:var(--rg);color:var(--dark);
+  padding:.6rem 1.2rem;
+  font-family:"Montserrat",sans-serif;font-size:.5rem;
+  letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);
+  z-index:3;
+}
+
+/* ─── EXPERIENCE / BRANDS ─── */
+#experience{padding:7rem 3.5rem;background:var(--off)}
+.exp-hdr{text-align:center;margin-bottom:4.5rem}
+.exp-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:1.5rem;max-width:1100px;margin:0 auto;
+}
+.exp-card{
+  background:var(--cream-2);
+  border:1px solid rgba(184,134,90,.12);
+  padding:2rem 1.8rem;
+  position:relative;overflow:hidden;
+  transition:border-color .3s,transform .3s;
+}
+.exp-card::before{
+  content:"";position:absolute;top:0;left:0;
+  width:100%;height:2px;
+  background:linear-gradient(to right,transparent,var(--rg),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.exp-card:hover{border-color:rgba(184,134,90,.4);transform:translateY(-4px)}
+.exp-card:hover::before{opacity:1}
+.exp-num{
+  font-family:"Montserrat",sans-serif;font-size:2rem;font-weight:900;
+  color:rgba(184,134,90,.08);line-height:1;margin-bottom:.8rem;
+}
+.exp-brand{
+  font-family:"Montserrat",sans-serif;font-size:.85rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--dark);
+  margin-bottom:.4rem;
+}
+.exp-role{
+  font-family:"Montserrat",sans-serif;font-size:.6rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--rg);
+  margin-bottom:.8rem;
+}
+.exp-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.exp-tag{
+  font-family:"Montserrat",sans-serif;font-size:.48rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.25rem .6rem;
+  border:1px solid rgba(184,134,90,.2);color:var(--mu2);
+}
+.exp-desc{
+  font-family:"Montserrat",sans-serif;font-size:.74rem;font-weight:300;
+  line-height:1.85;color:var(--mu);margin-top:.8rem;
+}
+.exp-list{margin-top:.8rem;display:flex;flex-direction:column;gap:.35rem}
+.exp-list li{
+  font-family:"Montserrat",sans-serif;font-size:.66rem;font-weight:400;
+  letter-spacing:.04em;color:var(--mu2);list-style:none;
+  padding-left:.8rem;position:relative;
+}
+.exp-list li::before{
+  content:"";position:absolute;left:0;top:.48em;
+  width:3px;height:1px;background:var(--rg);
+}
+
+/* ─── BRANDS LOGO STRIP ─── */
+#brands{padding:5rem 0;background:var(--cream-2);overflow:hidden}
+.brands-hdr{text-align:center;padding:0 3.5rem;margin-bottom:3rem}
+.brands-tape-wrap{
+  position:relative;overflow:hidden;padding:1.5rem 0;
+  border-top:1px solid rgba(184,134,90,.1);
+  border-bottom:1px solid rgba(184,134,90,.1);
+}
+.brands-tape-wrap::before,.brands-tape-wrap::after{
+  content:"";position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;
+}
+.brands-tape-wrap::before{left:0;background:linear-gradient(to right,var(--cream-2),transparent)}
+.brands-tape-wrap::after{right:0;background:linear-gradient(to left,var(--cream-2),transparent)}
+.brands-tape{
+  display:flex;gap:2rem;
+  animation:brandsScroll 28s linear infinite;
+  white-space:nowrap;width:max-content;
+}
+.brands-tape:hover{animation-play-state:paused}
+@keyframes brandsScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.brand-pill{
+  display:inline-flex;align-items:center;gap:.8rem;
+  padding:1rem 1.8rem;
+  background:var(--off);
+  border:1px solid rgba(184,134,90,.12);
+  flex-shrink:0;
+  transition:border-color .3s,transform .3s;
+}
+.brand-pill:hover{border-color:rgba(184,134,90,.4);transform:translateY(-3px)}
+.brand-pill-logo{
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(184,134,90,.07);border-radius:8px;
+  flex-shrink:0;font-size:.7rem;
+}
+.brand-pill-name{
+  font-family:"Montserrat",sans-serif;font-size:.58rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--dark);
+}
+.brand-pill-cat{
+  font-family:"Montserrat",sans-serif;font-size:.48rem;font-weight:400;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--mu);
+  margin-top:.15rem;
+}
+
+/* ─── CONTENT PORTFOLIO ─── */
+#content-portfolio{padding:7rem 3.5rem;background:var(--dark)}
+.cp-hdr{text-align:center;margin-bottom:2rem}
+.cp-filters{
+  display:flex;justify-content:center;gap:.5rem;
+  margin-bottom:3rem;flex-wrap:wrap;
+}
+.cp-filter{
+  font-family:"Montserrat",sans-serif;font-size:.56rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  padding:.55rem 1.3rem;
+  border:1px solid rgba(184,134,90,.2);
+  color:rgba(244,234,216,.4);background:transparent;
+  cursor:pointer;transition:all .3s;
+}
+.cp-filter:hover{border-color:rgba(184,134,90,.5);color:rgba(244,234,216,.7)}
+.cp-filter.active{border-color:var(--rg);color:var(--dark);background:var(--rg)}
+.phones-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2rem;max-width:1060px;margin:0 auto 3rem;
+}
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:.85rem}
+.pf{
+  position:relative;width:100%;max-width:185px;aspect-ratio:9/19.5;
+  background:#0E0E0E;border-radius:30px;border:2.5px solid #1E1E1E;
+  overflow:hidden;
+  box-shadow:0 0 0 1px rgba(184,134,90,.1),0 20px 55px rgba(0,0,0,.28);
+  cursor:pointer;transition:transform .3s,box-shadow .3s;
+}
+.pf:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 0 0 1px rgba(184,134,90,.38),0 40px 75px rgba(0,0,0,.35)}
+.p-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:30%;height:18px;background:#0E0E0E;border-radius:0 0 12px 12px;z-index:10}
+.pf::before{content:"";position:absolute;left:-3px;top:22%;height:12%;width:3px;background:#1A1A1A;border-radius:2px 0 0 2px;box-shadow:0 160% 0 #1A1A1A}
+.pf::after{content:"";position:absolute;right:-3px;top:20%;height:18%;width:3px;background:#1A1A1A;border-radius:0 2px 2px 0}
+.pf video{width:100%;height:100%;object-fit:cover;display:block;background:#111;cursor:pointer}.pf .p-play{pointer-events:none;display:none!important}
+.p-play{pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;background:rgba(184,134,90,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:opacity .3s,transform .3s;z-index:5}
+.pf:hover .p-play{pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.8)}
+.p-ui{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;justify-content:flex-end;padding:.75rem .65rem;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 42%);opacity:0;transition:opacity .3s}
+.pf:hover .p-ui{opacity:1}
+.p-tag{font-family:"Montserrat",sans-serif;font-size:.46rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.p-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.65rem;background:linear-gradient(155deg,#191919 0%,#0E0E0E 100%)}
+.p-ph-ico{width:32px;height:32px;border:1px solid rgba(184,134,90,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--rg)}
+.p-ph-txt{font-family:"Montserrat",sans-serif;font-size:.44rem;font-weight:400;letter-spacing:.1em;color:#444;text-align:center;padding:0 .5rem;line-height:1.65}
+.plbl strong{display:block;font-family:"Montserrat",sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+.plbl span{display:block;font-family:"Montserrat",sans-serif;font-size:.5rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-top:.18rem}
+.cp-upload-note{max-width:520px;margin:0 auto;text-align:center;padding:1.7rem 2rem;border:1px solid var(--gl);background:rgba(184,134,90,.03)}
+.cp-upload-note p{font-family:"Montserrat",sans-serif;font-size:.7rem;font-weight:300;color:var(--mu);line-height:1.8;margin-bottom:1rem}
+.cp-upload-note strong{font-weight:600;color:var(--cream)}
+.upload-btn{display:inline-flex;align-items:center;gap:.55rem;padding:.65rem 1.7rem;background:var(--rg);color:var(--dark);font-family:"Montserrat",sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .3s;border:none}
+.upload-btn:hover{background:var(--rg-p)}
+#vup{display:none}
+
+/* ─── SERVICES ─── */
+#services{padding:7rem 3.5rem;background:var(--off)}
+.s-hdr{text-align:center;max-width:600px;margin:0 auto 5rem}
+.s-sub{
+  font-family:"Montserrat",sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.25em;text-transform:uppercase;
+  color:var(--rg);margin-top:.8rem;
+}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,134,90,.1)}
+.svc-card{
+  background:var(--off);padding:2.8rem 2.2rem;
+  transition:background .4s;position:relative;overflow:hidden;
+}
+.svc-card::after{
+  content:"";position:absolute;top:0;left:0;
+  width:100%;height:1px;
+  background:linear-gradient(to right,transparent,var(--rg),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.svc-card:hover{background:var(--cream-2)}.svc-card:hover::after{opacity:1}
+.svc-num{
+  font-family:"Montserrat",sans-serif;font-size:2.5rem;font-weight:900;
+  color:rgba(184,134,90,.08);line-height:1;margin-bottom:1.2rem;display:block;
+}
+.svc-card h3{
+  font-family:"Montserrat",sans-serif;font-size:.82rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--dark);margin-bottom:.7rem;
+}
+.svc-desc{font-family:"Montserrat",sans-serif;font-size:.76rem;font-weight:300;line-height:1.85;color:var(--mu)}
+.svc-list{margin-top:1.2rem;display:flex;flex-direction:column;gap:.4rem}
+.svc-list li{
+  font-family:"Montserrat",sans-serif;font-size:.64rem;font-weight:400;
+  letter-spacing:.04em;color:var(--mu2);list-style:none;padding-left:.85rem;position:relative;
+}
+.svc-list li::before{content:"";position:absolute;left:0;top:.48em;width:3px;height:1px;background:var(--rg)}
+.svc-proof{
+  margin-top:1.2rem;padding:.8rem 1rem;
+  background:rgba(184,134,90,.06);border-left:2px solid var(--rg);
+  font-family:"Montserrat",sans-serif;font-size:.64rem;font-weight:500;
+  color:var(--rg);line-height:1.6;
+}
+.svc-diff{
+  margin-top:1rem;
+  font-family:"Montserrat",sans-serif;font-size:.66rem;font-weight:600;
+  font-style:italic;color:var(--rg-l);line-height:1.6;
+}
+
+/* ─── HOW I WORK ─── */
+#how-i-work{padding:7rem 3.5rem;background:var(--dark)}
+.hiw-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:rgba(184,134,90,.08);max-width:1100px;margin:3rem auto 0;
+}
+.hiw-step{
+  background:var(--dark);padding:2.5rem 2rem;
+  position:relative;overflow:hidden;transition:background .4s;
+}
+.hiw-step::after{
+  content:"";position:absolute;top:0;left:0;width:100%;height:1px;
+  background:linear-gradient(to right,transparent,var(--rg),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.hiw-step:hover{background:var(--dark-3)}.hiw-step:hover::after{opacity:1}
+.hiw-num{
+  font-family:"Montserrat",sans-serif;font-size:2.2rem;font-weight:900;
+  color:rgba(184,134,90,.07);line-height:1;margin-bottom:.8rem;
+}
+.hiw-icon{font-size:1.5rem;margin-bottom:.8rem;display:block}
+.hiw-title{
+  font-family:"Montserrat",sans-serif;font-size:.78rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--cream);margin-bottom:.6rem;
+}
+.hiw-desc{
+  font-family:"Montserrat",sans-serif;font-size:.74rem;font-weight:300;
+  color:rgba(244,234,216,.45);line-height:1.85;
+}
+
+/* ─── SELECTED WORK / PROJECTS ─── */
+#projects{padding:7rem 3.5rem;background:var(--cream-2)}
+.proj-hdr{text-align:center;margin-bottom:4rem}
+.proj-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;max-width:1100px;margin:0 auto;
+}
+.proj-card{
+  background:var(--off);
+  border:1px solid rgba(184,134,90,.12);
+  overflow:hidden;
+  transition:border-color .3s,transform .3s;
+  display:flex;flex-direction:column;
+}
+.proj-card:hover{border-color:rgba(184,134,90,.4);transform:translateY(-4px)}
+.proj-thumb{
+  width:100%;aspect-ratio:16/9;
+  background:var(--dark);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.proj-thumb-in{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:1.7rem;
+  color:rgba(184,134,90,.12);letter-spacing:.1em;
+}
+.proj-meta{padding:1.4rem}
+.proj-cat{
+  font-family:"Montserrat",sans-serif;font-size:.48rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--rg);margin-bottom:.4rem;
+}
+.proj-title{
+  font-family:"Montserrat",sans-serif;font-size:.88rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--dark);
+  line-height:1.3;margin-bottom:.6rem;
+}
+.proj-desc{
+  font-family:"Montserrat",sans-serif;font-size:.74rem;font-weight:300;
+  color:var(--mu);line-height:1.8;margin-bottom:1rem;
+}
+.proj-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.proj-tag{
+  font-family:"Montserrat",sans-serif;font-size:.46rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.22rem .6rem;border:1px solid rgba(184,134,90,.2);color:var(--mu2);
+}
+.proj-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:"Montserrat",sans-serif;font-size:.56rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--rg);text-decoration:none;
+  padding:.6rem 0;border-top:1px solid rgba(184,134,90,.1);
+  margin-top:auto;
+  transition:color .3s;
+}
+.proj-btn:hover{color:var(--rg-p)}
+.proj-status{
+  display:inline-block;
+  font-family:"Montserrat",sans-serif;font-size:.44rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.2rem .6rem;background:rgba(184,134,90,.1);color:var(--rg);
+  margin-bottom:.5rem;
+}
+
+
+/* ─── WORK CASE STUDIES / PROOF ─── */
+#proof{padding:7rem 3.5rem;background:var(--cream-2)}
+.work-case-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:1100px;margin:0 auto 5rem}
+.work-case{background:var(--off);border:1px solid rgba(184,134,90,.14);overflow:hidden;transition:transform .3s,border-color .3s}
+.work-case:hover{transform:translateY(-4px);border-color:rgba(184,134,90,.4)}
+.work-case-media{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(184,134,90,.12);min-height:260px}
+.work-shot{background:var(--dark-2);min-height:260px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.work-shot img{width:100%;height:100%;object-fit:cover;display:block}
+.work-shot.placeholder::before{content:'UPLOAD SCREENSHOT';font-family:"Montserrat",sans-serif;font-size:.48rem;letter-spacing:.18em;color:rgba(244,234,216,.28)}
+.work-shot.placeholder::after{content:attr(data-label);position:absolute;bottom:12px;left:12px;right:12px;font-family:"Montserrat",sans-serif;font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,234,216,.45)}
+.work-case-body{padding:1.7rem}
+.work-case-kicker{font-family:"Montserrat",sans-serif;font-size:.48rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rg);margin-bottom:.5rem}
+.work-case-title{font-family:"Montserrat",sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--dark);margin-bottom:.6rem}
+.work-case-desc{font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:300;line-height:1.8;color:var(--mu);margin-bottom:1rem}
+.work-case-list{display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1rem}
+.work-case-list li{font-family:"Montserrat",sans-serif;font-size:.6rem;color:var(--mu2);list-style:none;padding-left:.75rem;position:relative;line-height:1.5}
+.work-case-list li::before{content:"";position:absolute;left:0;top:.48em;width:3px;height:1px;background:var(--rg)}
+.proof-heading{text-align:center;margin:4rem auto 2rem}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1100px;margin:0 auto}
+.proof-card{background:var(--off);border:1px solid rgba(184,134,90,.14);padding:.7rem}
+.proof-media{aspect-ratio:4/3;background:var(--dark-2);overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative}
+.proof-media img{width:100%;height:100%;object-fit:cover;display:block}
+.proof-media.placeholder::before{content:'UPLOAD PROOF IMAGE';font-family:"Montserrat",sans-serif;font-size:.48rem;letter-spacing:.18em;color:rgba(244,234,216,.28)}
+.proof-media.placeholder::after{content:attr(data-label);position:absolute;bottom:10px;left:10px;right:10px;font-family:"Montserrat",sans-serif;font-size:.43rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,234,216,.42);text-align:center}
+.proof-caption{padding:.8rem .25rem .2rem;text-align:center;font-family:"Montserrat",sans-serif;font-size:.52rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1100px;margin:2.5rem auto 0}
+.testi-card{background:var(--off);border:1px solid rgba(184,134,90,.14);padding:.7rem;overflow:hidden}
+.testi-image{aspect-ratio:4/3;background:var(--dark-2);overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative}
+.testi-image img{width:100%;height:100%;object-fit:cover;display:block}
+.testi-image.placeholder::before{content:'UPLOAD CLIENT TESTIMONIAL';font-family:"Montserrat",sans-serif;font-size:.48rem;letter-spacing:.16em;color:rgba(244,234,216,.28);text-align:center}
+.testi-image.placeholder::after{content:attr(data-label);position:absolute;bottom:10px;left:10px;right:10px;font-family:"Montserrat",sans-serif;font-size:.43rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,234,216,.42);text-align:center}
+.testi-name{font-family:"Montserrat",sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dark);padding:.8rem .25rem .15rem}
+.testi-role{font-family:"Montserrat",sans-serif;font-size:.48rem;color:var(--mu);padding:0 .25rem .25rem}
+@media(max-width:900px){.work-case-grid,.proof-grid,.testi-grid{grid-template-columns:1fr}.work-case-media{min-height:220px}.work-shot{min-height:220px}}
+
+/* ─── TOOLKIT ─── */
+#toolkit{padding:7rem 3.5rem;background:var(--dark)}
+.tk-hdr{text-align:center;margin-bottom:4rem}
+.tk-categories{display:flex;flex-direction:column;gap:3rem;max-width:1100px;margin:0 auto}
+.tk-cat-label{
+  font-family:"Montserrat",sans-serif;font-size:.54rem;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--rg);
+  margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem;
+}
+.tk-cat-label::after{content:"";flex:1;height:1px;background:linear-gradient(to right,rgba(184,134,90,.2),transparent)}
+.tk-pills{display:flex;flex-wrap:wrap;gap:.7rem}
+.tk-pill{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.6rem 1.1rem;
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(184,134,90,.12);
+  transition:border-color .3s,background .3s,transform .3s;
+  cursor:default;
+}
+.tk-pill:hover{border-color:rgba(184,134,90,.4);background:rgba(184,134,90,.05);transform:translateY(-3px)}
+.tk-pill-icon{font-size:.9rem;flex-shrink:0}
+.tk-pill-name{
+  font-family:"Montserrat",sans-serif;font-size:.58rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(244,234,216,.7);
+  transition:color .3s;
+}
+.tk-pill:hover .tk-pill-name{color:var(--rg-p)}
+
+/* ─── RESULTS ─── */
+#results{padding:7rem 3.5rem;background:var(--off)}
+.results-hdr{text-align:center;margin-bottom:4rem}
+.results-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:1px;background:rgba(184,134,90,.1);
+  max-width:1100px;margin:0 auto;
+}
+.res-item{background:var(--off);padding:2.8rem 1.5rem;text-align:center}
+.res-num{
+  font-family:"Montserrat",sans-serif;font-size:2rem;font-weight:800;
+  color:var(--rg-l);display:block;line-height:1;
+}
+.res-suf{font-size:1rem;color:var(--rg)}
+.res-lbl{
+  font-family:"Montserrat",sans-serif;font-size:.5rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--mu);
+  margin-top:.6rem;display:block;line-height:1.5;
+}
+.results-disclaimer{
+  text-align:center;margin-top:2rem;
+  font-family:"Montserrat",sans-serif;font-size:.62rem;font-weight:300;
+  color:var(--mu);font-style:italic;
+}
+
+/* ─── WHY WORK WITH ME ─── */
+#why{padding:7rem 3.5rem;background:var(--dark)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:rgba(184,134,90,.08);max-width:1100px;margin:3rem auto 0;
+}
+.why-card{
+  background:var(--dark);padding:2.5rem 1.8rem;
+  position:relative;overflow:hidden;transition:background .4s;
+}
+.why-card::after{
+  content:"";position:absolute;top:0;left:0;width:100%;height:1px;
+  background:linear-gradient(to right,transparent,var(--rg),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.why-card:hover{background:var(--dark-3)}.why-card:hover::after{opacity:1}
+.why-num{
+  font-family:"Montserrat",sans-serif;font-size:1.8rem;font-weight:900;
+  color:rgba(184,134,90,.07);line-height:1;margin-bottom:.7rem;
+}
+.why-title{
+  font-family:"Montserrat",sans-serif;font-size:.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  color:var(--cream);margin-bottom:.6rem;line-height:1.3;
+}
+.why-desc{
+  font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:300;
+  color:rgba(244,234,216,.45);line-height:1.85;
+}
+
+/* ─── TESTIMONIALS PLACEHOLDER ─── */
+#testimonials{padding:5rem 3.5rem;background:var(--cream-2)}
+.testi-placeholder{
+  text-align:center;
+  border:1px dashed rgba(184,134,90,.25);
+  padding:4rem 2rem;max-width:600px;margin:2rem auto 0;
+  background:var(--off);
+}
+.testi-placeholder h3{
+  font-family:"Montserrat",sans-serif;font-size:.8rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--dark);
+  margin-bottom:1rem;
+}
+.testi-placeholder p{
+  font-family:"Montserrat",sans-serif;font-size:.76rem;font-weight:300;
+  color:var(--mu);line-height:1.8;font-style:italic;
+}
+
+/* ─── FINAL CTA ─── */
+#final-cta{
+  padding:8rem 3.5rem;background:var(--dark);
+  text-align:center;position:relative;overflow:hidden;
+}
+#final-cta::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(184,134,90,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.fcta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.fcta-badge{
+  display:inline-block;
+  font-family:"Montserrat",sans-serif;font-size:.54rem;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:var(--rg);border:1px solid rgba(184,134,90,.25);
+  padding:.5rem 1.4rem;margin-bottom:2rem;
+}
+.fcta-heading{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(1.8rem,4vw,3.5rem);font-weight:900;
+  text-transform:uppercase;letter-spacing:.04em;
+  color:var(--cream);line-height:1.1;margin-bottom:1rem;
+}
+.fcta-sub{
+  font-family:"Montserrat",sans-serif;font-size:.8rem;font-weight:300;
+  color:rgba(244,234,216,.45);max-width:500px;margin:0 auto 2.5rem;
+  line-height:1.85;
+}
+.fcta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.fcta-quote{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;
+  font-size:clamp(1.3rem,2.5vw,2rem);
+  color:rgba(184,134,90,.35);margin-top:2.5rem;line-height:1.4;
+}
+
+/* ─── CONTACT / FORM ─── */
+#contact{padding:7rem 3.5rem;background:var(--off)}
+.contact-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:7rem;max-width:1200px;margin:0 auto}
+.contact-info{}
+.contact-heading{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:900;
+  text-transform:uppercase;letter-spacing:.05em;
+  color:var(--dark);line-height:1.2;margin:1.2rem 0 1.5rem;
+}
+.contact-heading .accent{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:1.3em;text-transform:none;color:var(--rg)}
+.contact-body{
+  font-family:"Montserrat",sans-serif;font-size:.78rem;font-weight:300;
+  color:var(--mu);line-height:1.9;margin-bottom:2rem;
+}
+.contact-links{display:flex;flex-direction:column;gap:.7rem}
+.contact-link-row{
+  display:flex;align-items:center;gap:.9rem;
+  font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:300;
+  color:var(--mu);text-decoration:none;
+  padding:.65rem 0;border-bottom:1px solid rgba(184,134,90,.1);
+  transition:color .3s;
+}
+.contact-link-row:hover{color:var(--rg)}
+.contact-link-ico{
+  width:28px;height:28px;border:1px solid rgba(184,134,90,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;font-weight:700;color:var(--rg);flex-shrink:0;
+}
+
+/* Form */
+.form-group{margin-bottom:1.4rem}
+.form-label{
+  display:block;font-family:"Montserrat",sans-serif;
+  font-size:.5rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--mu);margin-bottom:.45rem;
+}
+.form-label .req{color:var(--rg)}
+.form-input{
+  width:100%;background:var(--cream-2);
+  border:1px solid rgba(184,134,90,.15);
+  color:var(--dark);padding:.85rem 1.05rem;
+  font-family:"Montserrat",sans-serif;font-size:.78rem;font-weight:300;
+  transition:border-color .3s;outline:none;
+  -webkit-appearance:none;
+}
+.form-input:focus{border-color:rgba(184,134,90,.5)}
+.form-input::placeholder{color:var(--mu)}
+select.form-input option{background:var(--cream-2);color:var(--dark)}
+textarea.form-input{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{
+  width:100%;padding:1rem;
+  background:var(--rg);color:var(--dark);
+  font-family:"Montserrat",sans-serif;font-size:.62rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  border:none;cursor:pointer;transition:background .3s;
+  margin-top:.5rem;
+}
+.form-submit:hover{background:var(--rg-p)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed}
+.form-honeypot{display:none !important}
+.form-msg{
+  display:none;padding:1rem 1.2rem;margin-top:1rem;
+  font-family:"Montserrat",sans-serif;font-size:.72rem;font-weight:500;
+  text-align:center;
+}
+.form-msg.success{background:rgba(184,134,90,.12);color:var(--rg);border:1px solid rgba(184,134,90,.3)}
+.form-msg.error{background:rgba(200,60,60,.08);color:#c03c3c;border:1px solid rgba(200,60,60,.2)}
+
+/* ─── FOOTER ─── */
+footer{
+  padding:2rem 3.5rem;background:var(--dark-2);
+  border-top:1px solid var(--gl);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-logo{font-family:"Great Vibes",cursive;font-size:1.4rem;color:rgba(244,234,216,.42);text-decoration:none}
+.footer-logo span{color:var(--rg)}
+.footer-copy{font-family:"Montserrat",sans-serif;font-size:.54rem;font-weight:400;letter-spacing:.1em;color:var(--mu2)}
+.footer-tagline{font-family:"Montserrat",sans-serif;font-size:.52rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mu2)}
+.social-row{display:flex;gap:.6rem}
+.social-btn{
+  width:28px;height:28px;border:1px solid var(--gl);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--mu);font-family:"Montserrat",sans-serif;
+  font-size:.58rem;font-weight:700;text-decoration:none;
+  transition:border-color .3s,color .3s;
+}
+.social-btn:hover{border-color:var(--rg);color:var(--rg)}
+
+/* ─── SHARED UTILITIES ─── */
+.div{height:1px;background:linear-gradient(to right,transparent,var(--gl),transparent)}
+.ey{
+  font-family:"Montserrat",sans-serif;font-size:.54rem;font-weight:600;
+  letter-spacing:.36em;text-transform:uppercase;color:var(--rg);
+  margin-bottom:1rem;display:flex;align-items:center;gap:.7rem;
+}
+.ey::before{content:"";display:block;width:.9rem;height:1px;background:var(--rg)}
+.ey.c{justify-content:center}
+.ey.c::before,.ey.c::after{content:"";display:block;flex:1;max-width:1.4rem;height:1px;background:var(--rg)}
+.sh{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;
+  text-transform:uppercase;letter-spacing:.06em;
+  color:var(--dark);line-height:1;margin-bottom:.9rem;
+}
+.sh-light{color:var(--cream)!important}
+.accent-gv{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--rg-l);letter-spacing:.01em;text-transform:none}
+.reveal{opacity:1!important;visibility:visible!important;transform:none!important;transition:opacity .85s ease,transform .85s ease}
+html.reveal-ready .reveal{opacity:1!important;visibility:visible!important;transform:none!important}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  #about{grid-template-columns:1fr;gap:3rem;padding:5rem 2rem}
+  .services-grid,.hiw-grid{grid-template-columns:1fr 1fr}
+  .results-grid,.why-grid{grid-template-columns:repeat(3,1fr)}
+  .proj-grid{grid-template-columns:1fr 1fr}
+  .phones-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-inner{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:768px){
+  nav{padding:1.1rem 1.5rem}.nav-links{display:none}
+  #hero{padding:3rem 1.5rem 5rem}
+  #about,#experience,#brands,#content-portfolio,#services,#how-i-work,#projects,#toolkit,#results,#why,#final-cta,#contact{padding:4rem 1.5rem}
+  .hero-stats{flex-direction:column;gap:1.2rem}
+  .hstat{border-right:none;border-bottom:1px solid rgba(184,134,90,.09);padding:0 0 1.2rem;min-width:unset}
+  .hstat:last-child{border-bottom:none}
+  .services-grid,.hiw-grid,.why-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:repeat(2,1fr)}
+  .proj-grid{grid-template-columns:1fr}
+  .phones-grid{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center;padding:1.5rem;gap:.8rem}
+  .exp-grid{grid-template-columns:1fr}
+  .about-proof-grid{grid-template-columns:1fr 1fr}
+}
+
+/* Always keep every section accessible even when JavaScript is unavailable. */
+html, body { min-height: 100%; }
+section { display: block; position: relative; scroll-margin-top: 90px; }
+@media (max-width: 768px){ section { scroll-margin-top: 72px; } }
+
+/* ─── LUXURY CONVERSION LAYER ─── */
+body{background:var(--off)}
+section{position:relative}
+.hero-proof-strip{margin-top:2.2rem;max-width:850px;font-size:.48rem;line-height:1.9;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,229,.34);position:relative;z-index:1}.hero-proof-strip strong{color:var(--rg-l);font-weight:700}.hero-audience{margin-top:1.15rem;font-size:.49rem;letter-spacing:.28em;font-weight:700;color:rgba(243,238,229,.48);position:relative;z-index:1}
+.hero-audience span{color:var(--rg);padding:0 .55rem}
+.fcta-accent{color:var(--rg-l);font-family:"Cormorant Garamond",serif;font-style:italic;text-transform:none;letter-spacing:0}
+.fcta-sub{max-width:760px!important;font-size:.9rem!important;line-height:1.9!important;color:rgba(244,234,216,.58)!important}
+.video-proof-note{max-width:780px;margin:0 auto 1.5rem;text-align:center;font-family:"Montserrat",sans-serif;font-size:.62rem;line-height:1.8;color:var(--mu);padding:1rem 1.2rem;border:1px solid rgba(199,165,106,.18);background:rgba(199,165,106,.035)}
+.video-proof-note strong{color:var(--dark);font-weight:700}
+.results-proofline{margin:1.7rem auto 0;max-width:900px;text-align:center;font-family:"Montserrat",sans-serif;font-size:.56rem;line-height:1.8;letter-spacing:.06em;color:var(--mu)}
+.results-proofline span{color:var(--rg);font-weight:800;font-size:.72rem}
+.exp-card,.svc-card,.why-card,.testi-card,.proof-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.exp-card:hover,.svc-card:hover,.why-card:hover,.testi-card:hover,.proof-card:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(10,10,12,.09);border-color:rgba(199,165,106,.35)}
+.sh,.contact-heading,.fcta-heading{letter-spacing:-.02em}
+@media(max-width:800px){.hero-audience{line-height:2}.fcta-heading{font-size:clamp(2.2rem,11vw,4rem)!important}}
+
+/* Vercel-ready portfolio video playback */
+.portfolio-video{width:100%;height:100%;display:block;object-fit:cover;background:#0e0e0e;border:0;}
+.portfolio-video::-webkit-media-controls-panel{display:flex;}
+.pf{overflow:hidden;}
+
+/* Final media reliability */
+.portfolio-video{position:relative;z-index:2;object-fit:cover;background:#0d0d0d;}
+.p-ph{position:absolute;inset:0;z-index:1;transition:opacity .25s ease;}
+.pf.media-ready .p-ph{opacity:0;pointer-events:none;}
+.work-shot img,.proof-media img{display:block;width:100%;height:100%;object-fit:cover;}
+.about-frame img{object-fit:cover;}
+.brand-capabilities{max-width:1100px;margin:3rem auto 0;padding:0 3.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.brand-cap-card{position:relative;min-height:250px;overflow:hidden;border:1px solid rgba(184,134,90,.16);background:#111;color:#fff;}
+.brand-cap-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;transition:transform .6s ease,opacity .4s ease;}
+.brand-cap-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.08),rgba(10,10,12,.92));}
+.brand-cap-card:hover img{transform:scale(1.06);opacity:.6;}
+.brand-cap-content{position:absolute;inset:auto 1.2rem 1.2rem;z-index:2;}
+.brand-cap-no{font:600 .6rem Montserrat,sans-serif;letter-spacing:.2em;color:var(--rg-l);margin-bottom:.45rem;}
+.brand-cap-title{font:700 .9rem Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;}
+.brand-cap-copy{font:300 .62rem Montserrat,sans-serif;line-height:1.6;color:rgba(255,255,255,.7);margin-top:.35rem;}
+@media(max-width:900px){.brand-capabilities{grid-template-columns:repeat(2,1fr);padding:0 1.25rem;}}
+@media(max-width:520px){.brand-capabilities{grid-template-columns:1fr;}.brand-cap-card{min-height:220px;}}
+/* Refined page-wide luxury palette */
+body{background:#0b0807;color:var(--cream)}
+.marquee-wrap{background:#eee6d9}
+#experience,#services,#how-i-work,#toolkit,#why,#contact{background:#f1eadf}
+#brands{background:#ebe2d5}
+#results{background:#0b0807}
+#projects{background:#120e0c}
+#final-cta{background:#100b09}
+footer{background:#080605}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo">Tisha <span>Dutta</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#content-portfolio">Content</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#toolkit">Toolkit</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#proof">Proof</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's Work Together</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero" class="hero-luxury">
+  <div class="hero-bg-photo" aria-hidden="true"></div>
+  <div class="hero-light-beam beam-one" aria-hidden="true"></div>
+  <div class="hero-light-beam beam-two" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-over-label">Social Media · Content · Personal Branding</div>
+      <h1 class="hero-big hero-line-one">I BUILD</h1>
+      <h1 class="hero-big hero-script">Digital</h1>
+      <h1 class="hero-big hero-line-two">PRESENCES</h1>
+      <h1 class="hero-big hero-line-three">PEOPLE REMEMBER.</h1>
+      <p class="hero-tagline">I help brands, founders, creators and businesses turn ideas into content, visibility and measurable growth.</p>
+      <div class="hero-audience">BRANDS <span>•</span> FOUNDERS <span>•</span> CREATORS <span>•</span> BUSINESSES</div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-fill">Work With Me <span aria-hidden="true">→</span></a>
+        <a href="#projects" class="btn-wire">View My Work <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num">20K<span>+</span></span><span class="hstat-lbl">Organic Instagram<br>Growth</span></div>
+        <div class="hstat"><span class="hstat-num">100<span>+</span></span><span class="hstat-lbl">UGC Videos<br>Delivered</span></div>
+        <div class="hstat"><span class="hstat-num">267K<span>+</span></span><span class="hstat-lbl">Content<br>Views</span></div>
+        <div class="hstat"><span class="hstat-num">0 → 800</span><span class="hstat-lbl">LinkedIn<br>Growth</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Tisha Dutta portrait">
+      <div class="hero-portrait-glow"></div>
+      <img src="assets/portrait/tisha-dutta.webp" alt="Tisha Dutta" class="hero-portrait" fetchpriority="high" decoding="async">
+      <div class="hero-portrait-vignette"></div>
+      <div class="hero-scroll">SCROLL <span>↓</span></div>
+    </div>
+  </div>
+  <div class="hero-proof-strip">I don&apos;t just post. <strong>I build the system behind the presence.</strong> Strategy · Content · Shoots · Publishing · Analytics · LinkedIn</div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mq-item">Social Media Strategy<div class="mq-dot"></div></div>
+    <div class="mq-item">Content Creation<div class="mq-dot"></div></div>
+    <div class="mq-item">LinkedIn Ghostwriting<div class="mq-dot"></div></div>
+    <div class="mq-item">Brand Storytelling<div class="mq-dot"></div></div>
+    <div class="mq-item">Reels<div class="mq-dot"></div></div>
+    <div class="mq-item">Analytics<div class="mq-dot"></div></div>
+    <div class="mq-item">Social Media Strategy<div class="mq-dot"></div></div>
+    <div class="mq-item">Content Creation<div class="mq-dot"></div></div>
+    <div class="mq-item">LinkedIn Ghostwriting<div class="mq-dot"></div></div>
+    <div class="mq-item">Brand Storytelling<div class="mq-dot"></div></div>
+    <div class="mq-item">Reels<div class="mq-dot"></div></div>
+    <div class="mq-item">Analytics<div class="mq-dot"></div></div>
+    <div class="mq-item">Social Media Strategy<div class="mq-dot"></div></div>
+    <div class="mq-item">Content Creation<div class="mq-dot"></div></div>
+    <div class="mq-item">LinkedIn Ghostwriting<div class="mq-dot"></div></div>
+    <div class="mq-item">Brand Storytelling<div class="mq-dot"></div></div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="about-text-col">
+    <div class="about-eyebrow reveal">About Me</div>
+    <div class="about-main-h reveal d1">
+      I DON&apos;T JUST CREATE CONTENT.<br>
+      I BUILD THE SYSTEM BEHIND IT.
+    </div>
+    <p class="para reveal d2">
+      I&apos;m Tisha — a Social Media Manager, Content Strategist and Creator. I work across strategy, content, shoots, publishing and performance, with a strong focus on turning social media into a measurable brand-growth channel.
+    </p>
+    <p class="para reveal d2">
+      I grew my own Instagram presence from <strong style="color:var(--cream)">5,000 → 20,000+ followers organically</strong>, while creating and delivering <strong style="color:var(--cream)">100+ UGC videos</strong> across brands, agencies and companies. My work has spanned immigration, travel, beauty, fashion, products, agencies, marketing, AI/tools and branding.
+    </p>
+    <p class="para reveal d2">
+      I&apos;m hands-on from idea to execution: audience and competitor research, content pillars, calendars, scripts, captions, short-form video, on-camera content, shoots, publishing, community touchpoints and performance tracking. I care about both how content looks and what it does for the business.
+    </p>
+    <div class="about-proof-grid reveal d3">
+      <div class="about-proof"><strong>20K+</strong><span>Instagram followers</span><small>Grown organically</small></div>
+      <div class="about-proof"><strong>100+</strong><span>UGC videos</span><small>Brands &amp; companies</small></div>
+      <div class="about-proof"><strong>8+</strong><span>Industry categories</span><small>Across content projects</small></div>
+      <div class="about-proof"><strong>360°</strong><span>Content execution</span><small>Strategy → Shoot → Publish</small></div>
+    </div>
+    <div class="about-highlight reveal d3">
+      I don&apos;t just manage pages. I build the content system, create the assets, show up for the shoot and track what moves the brand forward.
+    </div>
+    <div class="about-tags reveal d3">
+      <span class="atag">Social Media Management</span>
+      <span class="atag">Content Strategy</span>
+      <span class="atag">LinkedIn Ghostwriting</span>
+      <span class="atag">Brand Storytelling</span>
+      <span class="atag">Short-form Video</span>
+      <span class="atag">Analytics</span>
+      <span class="atag">Personal Branding</span>
+      <span class="atag">Founder Branding</span>
+    </div>
+  </div>
+  <div class="reveal d2">
+    <div class="about-frame">
+      <img src="assets/portrait/tisha-dutta.webp" alt="Tisha Dutta — Social Media Manager and Content Strategist" loading="eager" decoding="async">
+      <div class="about-badge">Available for Work</div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience">
+  <div class="exp-hdr reveal">
+    <div class="ey c">Experience</div>
+    <div class="sh reveal d1" style="color:var(--dark)">BRANDS, AGENCIES &amp; <span class="accent-gv">REAL-WORLD WORK</span></div>
+    <p style="font-family:Montserrat,sans-serif;font-size:.76rem;font-weight:300;color:var(--mu);margin-top:.5rem" class="reveal d2">I&apos;ve Worked With</p>
+  </div>
+  <div class="exp-grid">
+
+    <!-- NEXTNATION -->
+    <div class="exp-card reveal d1">
+      <div class="exp-num">01</div>
+      <div class="exp-brand">NextNation</div>
+      <div class="exp-role">Social Media Intern</div>
+      <div class="exp-tags">
+        <span class="exp-tag">Social Media</span>
+        <span class="exp-tag">Content</span>
+        <span class="exp-tag">CRM</span>
+        <span class="exp-tag">Analytics</span>
+      </div>
+      <ul class="exp-list">
+        <li>Handled end-to-end social media across Instagram, LinkedIn, WhatsApp and other channels</li>
+        <li>Planned and created content, including on-camera videos and social-first assets</li>
+        <li>Supported campaigns and managed outdoor/on-site shoots and shoot execution</li>
+        <li>Manually assigned leads to BDEs in the CRM and supported lead-flow coordination</li>
+        <li>Managed Google Business reviews and supported local brand visibility</li>
+        <li>Built monthly ad-spend trackers and tracked social media performance and analysis</li>
+      </ul>
+    </div>
+
+    <!-- TRANZYT -->
+    <div class="exp-card reveal d2">
+      <div class="exp-num">02</div>
+      <div class="exp-brand">Tranzyt</div>
+      <div class="exp-role">Sub-brand / Project · NextNation</div>
+      <div class="exp-tags">
+        <span class="exp-tag">Content Creation</span>
+        <span class="exp-tag">Scheduling</span>
+        <span class="exp-tag">Campaigns</span>
+      </div>
+      <ul class="exp-list">
+        <li>Created content for the Tranzyt sub-brand</li>
+        <li>Planned post ideas and supported the content pipeline</li>
+        <li>Scheduled and coordinated social media publishing</li>
+        <li>Supported campaigns and content shoots</li>
+      </ul>
+    </div>
+
+    <!-- LOVESUNDAYS -->
+    <div class="exp-card reveal d3">
+      <div class="exp-num">03</div>
+      <div class="exp-brand">LOVESUNDAYS</div>
+      <div class="exp-role">Social Media Manager / Freelance</div>
+      <div class="exp-tags"><span class="exp-tag">Social Media</span><span class="exp-tag">Content Strategy</span><span class="exp-tag">Creative</span></div>
+      <ul class="exp-list"><li>Planned and managed social media content</li><li>Created reels, carousels and creative content</li><li>Developed content calendars and brand storytelling</li><li>Managed ongoing social media execution</li></ul>
+    </div>
+
+    <!-- DICTION -->
+    <div class="exp-card reveal d1">
+      <div class="exp-num">04</div><div class="exp-brand">DICTION Agency</div><div class="exp-role">Social Media Manager</div>
+      <div class="exp-tags"><span class="exp-tag">Social Media</span><span class="exp-tag">Client Handling</span><span class="exp-tag">3 Active Clients</span></div>
+      <ul class="exp-list"><li>Content planning and social media execution across multiple accounts</li><li>Captions, creative direction and content calendars</li><li>Client coordination and page management</li><li>Currently handling 3 active clients</li></ul>
+    </div>
+
+    <!-- GRK ADS -->
+    <div class="exp-card reveal d2">
+      <div class="exp-num">05</div><div class="exp-brand">GRK Ads</div><div class="exp-role">Social Media &amp; Content</div>
+      <div class="exp-tags"><span class="exp-tag">Content Strategy</span><span class="exp-tag">Social Media</span><span class="exp-tag">Creative</span></div>
+      <ul class="exp-list"><li>Content strategy and social media management</li><li>Reel concepts, scripts and brand-specific ideation</li><li>On-location content shoots and client project execution</li></ul>
+    </div>
+
+    <!-- JOURNEY.AI -->
+    <div class="exp-card reveal d3">
+      <div class="exp-num">06</div><div class="exp-brand">Journey.AI</div><div class="exp-role">Content &amp; Social Media</div>
+      <div class="exp-tags"><span class="exp-tag">Content</span><span class="exp-tag">Social Media</span></div>
+      <ul class="exp-list"><li>Content creation and social media support</li><li>Creative ideation and brand communication</li></ul>
+    </div>
+
+    <!-- BOUTIQUE -->
+    <div class="exp-card reveal d1">
+      <div class="exp-num">07</div><div class="exp-brand">Boutique Projects</div><div class="exp-role">Fashion Content Projects</div>
+      <div class="exp-tags"><span class="exp-tag">Fashion</span><span class="exp-tag">Reels</span><span class="exp-tag">Content</span></div>
+      <ul class="exp-list"><li>Created fashion-focused social content and reels</li><li>Supported shoot concepts and content execution</li></ul>
+    </div>
+
+    <!-- UNITY SOURCE CODE -->
+    <div class="exp-card reveal d3">
+      <div class="exp-num">09</div><div class="exp-brand">Unity Source Code</div><div class="exp-role">Freelance Social Media Manager</div>
+      <div class="exp-tags"><span class="exp-tag">Social Media</span><span class="exp-tag">Strategy</span><span class="exp-tag">Content</span></div>
+      <ul class="exp-list"><li>Managed social media with a focus on consistent brand communication and audience growth</li><li>Planned content ideas and supported day-to-day publishing</li><li>Connected content execution with broader brand visibility goals</li></ul>
+    </div>
+
+    <!-- DESIGN MEDIA -->
+    <div class="exp-card reveal d1">
+      <div class="exp-num">10</div><div class="exp-brand">Design Media</div><div class="exp-role">Social Media / Content · UI/UX Startup</div>
+      <div class="exp-tags"><span class="exp-tag">LinkedIn</span><span class="exp-tag">Content</span><span class="exp-tag">Growth</span></div>
+      <ul class="exp-list"><li>Helped build the company&apos;s LinkedIn presence from <strong>0 → 800 followers</strong></li><li>Created and supported LinkedIn content for a UI/UX-focused startup</li><li>Worked on consistent publishing and audience-facing brand communication</li></ul>
+    </div>
+
+    <!-- ART MUSEUM -->
+    <div class="exp-card reveal d2">
+      <div class="exp-num">08</div><div class="exp-brand">Art Museum / Art Business</div><div class="exp-role">Brand Awareness &amp; Content Projects</div>
+      <div class="exp-tags"><span class="exp-tag">Brand Awareness</span><span class="exp-tag">Campaigns</span><span class="exp-tag">On-site</span></div>
+      <ul class="exp-list"><li>Created content to increase awareness and encourage visits</li><li>Supported campaigns promoting artwork experiences and art classes</li><li>Handled on-site execution, camera work and on-camera content</li><li>Helped coordinate and execute content shoots</li></ul>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ BRANDS STRIP ══ -->
+<section id="brands">
+  <div class="brands-hdr reveal">
+    <div class="ey c">Worked With</div>
+    <div class="sh" style="color:var(--dark)">BRANDS, <span class="accent-gv">BUSINESSES</span> &amp; BUILDERS</div>
+    <p style="font-family:Montserrat,sans-serif;font-size:.76rem;font-weight:300;color:var(--mu);margin-top:.6rem">Different industries. One approach: strategy, execution and proof.</p>
+  </div>
+  <div class="brands-tape-wrap">
+    <div class="brands-tape">
+      <div class="brand-pill"><div class="brand-pill-logo">NN</div><div><div class="brand-pill-name">NextNation</div><div class="brand-pill-cat">Content · Social</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">TR</div><div><div class="brand-pill-name">Tranzyt</div><div class="brand-pill-cat">Content Creation</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">GR</div><div><div class="brand-pill-name">GRK Ads</div><div class="brand-pill-cat">Content · Creative</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">US</div><div><div class="brand-pill-name">Unity Source Code</div><div class="brand-pill-cat">Freelance Social Media</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">DM</div><div><div class="brand-pill-name">Design Media</div><div class="brand-pill-cat">LinkedIn · Growth</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">AI</div><div><div class="brand-pill-name">Journey.AI</div><div class="brand-pill-cat">Content · Social</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">LS</div><div><div class="brand-pill-name">LOVESUNDAYS</div><div class="brand-pill-cat">Social · Strategy</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">AM</div><div><div class="brand-pill-name">Art Museum</div><div class="brand-pill-cat">Awareness · Content</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">BT</div><div><div class="brand-pill-name">Boutique</div><div class="brand-pill-cat">Fashion · Reels</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">DA</div><div><div class="brand-pill-name">DICTION Agency</div><div class="brand-pill-cat">Social Media</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">NN</div><div><div class="brand-pill-name">NextNation</div><div class="brand-pill-cat">Content · Social</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">TR</div><div><div class="brand-pill-name">Tranzyt</div><div class="brand-pill-cat">Content Creation</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">GR</div><div><div class="brand-pill-name">GRK Ads</div><div class="brand-pill-cat">Content · Creative</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">US</div><div><div class="brand-pill-name">Unity Source Code</div><div class="brand-pill-cat">Freelance Social Media</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">DM</div><div><div class="brand-pill-name">Design Media</div><div class="brand-pill-cat">LinkedIn · Growth</div></div></div>
+      <div class="brand-pill"><div class="brand-pill-logo">AI</div><div><div class="brand-pill-name">Journey.AI</div><div class="brand-pill-cat">Content · Social</div></div></div>
+    </div>
+  </div>
+  <div class="brand-capabilities">
+    <article class="brand-cap-card reveal d1"><img src="assets/work/nextnation-bts.webp" alt="Content production and shoot setup" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">01 · CONTENT CREATION</div><div class="brand-cap-title">From idea to shoot</div><div class="brand-cap-copy">Scripts, concepts, on-camera execution and social-first assets.</div></div></article>
+    <article class="brand-cap-card reveal d2"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Content strategy and social performance" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">02 · CONTENT STRATEGY</div><div class="brand-cap-title">Build the system</div><div class="brand-cap-copy">Pillars, calendars, formats and campaigns built around the audience.</div></div></article>
+    <article class="brand-cap-card reveal d3"><img src="assets/work/nextnation-instagram.webp" alt="Social media management work" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">03 · SOCIAL MANAGEMENT</div><div class="brand-cap-title">Run the presence</div><div class="brand-cap-copy">Publishing, channel management, community touchpoints and consistency.</div></div></article>
+    <article class="brand-cap-card reveal d4"><img src="assets/proof/my-performance-dashboard.webp" alt="Performance analytics dashboard" loading="lazy"><div class="brand-cap-content"><div class="brand-cap-no">04 · ANALYTICS &amp; GROWTH</div><div class="brand-cap-title">Measure what moves</div><div class="brand-cap-copy">Track reach, viewers, content performance and decisions that improve the next cycle.</div></div></article>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ CONTENT PORTFOLIO ══ -->
+<section id="content-portfolio">
+  <div class="cp-hdr reveal">
+    <div class="ey c">My Content</div>
+    <div class="sh sh-light reveal d1">FROM IDEA → SHOOT → EDIT → <span class="accent-gv">Publish</span></div>
+    <p style="font-family:Montserrat,sans-serif;font-size:.76rem;font-weight:300;color:var(--mu);margin-top:.5rem;line-height:1.7" class="reveal d2">Short-form content built for attention, retention and brand recall.</p>
+  </div>
+  <div class="cp-filters">
+    <button class="cp-filter" data-filter="all">All</button>
+    <button class="cp-filter" data-filter="reels">Reels</button>
+    <button class="cp-filter active" data-filter="ugc">UGC / SHORT-FORM</button>
+    <button class="cp-filter" data-filter="talking-head">Talking Head</button>
+    <button class="cp-filter" data-filter="brand">Brand Content</button>
+    <button class="cp-filter" data-filter="fashion">Fashion</button>
+    <button class="cp-filter" data-filter="client">Client Work</button>
+  </div>
+  <div class="phones-grid" id="contentGrid">
+    <div class="phone-wrap reveal d1" data-cat="ugc reels client"><div class="pf" ><div class="p-notch"></div><video id="v1" class="portfolio-video" src="videos/tranzyt-vietnam.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/tranzyt-vietnam.jpg" data-file="tranzyt-vietnam.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Reels</div></div></div><div class="plbl"><strong>Tranzyt · Vietnam Travel</strong><span>Tranzyt &bull; Instagram Reels</span></div></div>
+    <div class="phone-wrap reveal d2" data-cat="ugc client"><div class="pf" ><div class="p-notch"></div><video id="v2" class="portfolio-video" src="videos/tranzyt-travel-cost.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/tranzyt-travel-cost.jpg" data-file="tranzyt-travel-cost.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">UGC</div></div></div><div class="plbl"><strong>Tranzyt · Travel Cost</strong><span>Tranzyt &bull; UGC-style</span></div></div>
+    <div class="phone-wrap reveal d3" data-cat="ugc talking-head client"><div class="pf" ><div class="p-notch"></div><video id="v3" class="portfolio-video" src="videos/tranzyt-talking-head.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/tranzyt-talking-head.jpg" data-file="tranzyt-talking-head.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Talking Head</div></div></div><div class="plbl"><strong>Tranzyt · Talking Head</strong><span>Tranzyt &bull; Talking Head</span></div></div>
+    <div class="phone-wrap reveal d4" data-cat="ugc reels travel client"><div class="pf" ><div class="p-notch"></div><video id="v4" class="portfolio-video" src="videos/tranzyt-europe.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/tranzyt-europe.jpg" data-file="tranzyt-europe.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Fashion</div></div></div><div class="plbl"><strong>Tranzyt · Europe Travel</strong><span>Tranzyt &bull; Travel Reel</span></div></div>
+    <div class="phone-wrap reveal d1" data-cat="ugc talking-head client"><div class="pf" ><div class="p-notch"></div><video id="v5" class="portfolio-video" src="videos/grk-ads-goal.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/grk-ads-goal.jpg" data-file="grk-ads-goal.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Client</div></div></div><div class="plbl"><strong>GRK Ads · Talking Head</strong><span>GRK Ads &bull; Client Content</span></div></div>
+    <div class="phone-wrap reveal d2" data-cat="ugc brand client"><div class="pf" ><div class="p-notch"></div><video id="v6" class="portfolio-video" src="videos/grk-ads-content-strategy.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/grk-ads-content-strategy.jpg" data-file="grk-ads-content-strategy.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Brand</div></div></div><div class="plbl"><strong>GRK Ads · Content Strategy</strong><span>GRK Ads &bull; Social</span></div></div>
+    <div class="phone-wrap reveal d3" data-cat="ugc reels client"><div class="pf" ><div class="p-notch"></div><video id="v7" class="portfolio-video" src="videos/nextnation.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/nextnation.jpg" data-file="nextnation.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">Reels</div></div></div><div class="plbl"><strong>NextNation · Social Content</strong><span>NextNation &bull; Instagram Reels</span></div></div>
+    <div class="phone-wrap reveal d4" data-cat="ugc brand client"><div class="pf" ><div class="p-notch"></div><video id="v8" class="portfolio-video" src="videos/grk-ads-offer.mp4" controls autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture poster="assets/posters/grk-ads-offer.jpg" data-file="grk-ads-offer.mp4"></video><div class="p-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><div class="p-ui"><div class="p-tag">UGC</div></div></div><div class="plbl"><strong>GRK Ads · Offer Creative</strong><span>GRK Ads &bull; UGC-style</span></div></div>
+  </div>
+  
+  <div class="video-proof-note reveal"><strong>Selected client content.</strong> Videos autoplay muted and loop when visible. Click any video to pause or play.</div>
+  <div class="cp-upload-note reveal">
+    <p>The selected videos are already loaded. These videos are embedded in this portfolio, so they play directly wherever the HTML is opened.</p>
+    <button class="upload-btn" ><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>Upload Video</button>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="s-hdr">
+    <div class="ey c reveal">What I Do</div>
+    <div class="sh reveal d1">SERVICES &amp; <span class="accent-gv">Offerings</span></div>
+    <div class="s-sub reveal d2">Strategy → Creation → Management → Optimization</div>
+  </div>
+  <div class="services-grid">
+
+    <div class="svc-card reveal">
+      <span class="svc-num">01</span>
+      <h3>Social Media Strategy</h3>
+      <p class="svc-desc">Building a clear content system around your brand, audience and business goals.</p>
+      <ul class="svc-list">
+        <li>Brand &amp; competitor research</li>
+        <li>Audience behaviour analysis</li>
+        <li>Brand persona development</li>
+        <li>SWOT analysis</li>
+        <li>Content gap analysis</li>
+        <li>Past performance analysis</li>
+        <li>Monthly trends &amp; updates</li>
+        <li>Content pillars &amp; calendar</li>
+        <li>Platform strategy</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal d1">
+      <span class="svc-num">02</span>
+      <h3>Content Creation</h3>
+      <p class="svc-desc">Turning strategy into content people actually want to watch, save and share.</p>
+      <ul class="svc-list">
+        <li>Content ideation &amp; reel concepts</li>
+        <li>Script writing</li>
+        <li>Talking-head &amp; UGC-style content</li>
+        <li>Brand storytelling</li>
+        <li>Carousel design</li>
+        <li>Reel editing</li>
+        <li>Caption writing, hooks &amp; CTAs</li>
+        <li>Content shoots &amp; on-camera content</li>
+      </ul>
+      <div class="svc-diff">I don&apos;t only manage the page — I can also become the content creator behind it.</div>
+    </div>
+
+    <div class="svc-card reveal d2">
+      <span class="svc-num">03</span>
+      <h3>Social Media Management</h3>
+      <p class="svc-desc">Keeping your brand consistent, active and strategically managed across platforms.</p>
+      <ul class="svc-list">
+        <li>Content scheduling &amp; publishing</li>
+        <li>Caption &amp; hashtag optimisation</li>
+        <li>Community management</li>
+        <li>Content calendar management</li>
+        <li>Multiple-platform scheduling</li>
+        <li>Client coordination</li>
+        <li>Feedback rounds &amp; monthly planning</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal">
+      <span class="svc-num">04</span>
+      <h3>LinkedIn Ghostwriting</h3>
+      <p class="svc-desc">Turning expertise into a personal brand people remember.</p>
+      <ul class="svc-list">
+        <li>Founder positioning</li>
+        <li>LinkedIn profile optimisation</li>
+        <li>Ghostwritten posts &amp; storytelling</li>
+        <li>Thought-leadership content</li>
+        <li>Content pillars &amp; hook development</li>
+        <li>Personal brand strategy</li>
+        <li>Audience engagement strategy</li>
+      </ul>
+      <div class="svc-proof">267K+ content views &bull; 149K+ viewers &bull; 0 → 800 LinkedIn growth</div>
+    </div>
+
+    <div class="svc-card reveal d1">
+      <span class="svc-num">05</span>
+      <h3>Analytics &amp; Optimization</h3>
+      <p class="svc-desc">Because content isn&apos;t finished when it&apos;s published.</p>
+      <ul class="svc-list">
+        <li>Monthly insights &amp; performance analysis</li>
+        <li>Reach, engagement, saves &amp; shares tracking</li>
+        <li>Audience behaviour analysis</li>
+        <li>Identifying winning content formats</li>
+        <li>Competitor performance analysis</li>
+        <li>Monthly reporting</li>
+        <li>Content optimization</li>
+      </ul>
+      <div class="svc-diff">Create → Measure → Learn → Improve → Repeat.</div>
+    </div>
+
+    <div class="svc-card reveal d2">
+      <span class="svc-num">06</span>
+      <h3>Brand &amp; Growth</h3>
+      <p class="svc-desc">Connecting content to the bigger business picture.</p>
+      <ul class="svc-list">
+        <li>Brand positioning</li>
+        <li>Offer strategy</li>
+        <li>Content funnels</li>
+        <li>Lead generation ideas</li>
+        <li>Community building</li>
+        <li>Campaign concepts</li>
+        <li>Personal &amp; founder branding</li>
+        <li>Conversion-focused content</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ HOW I WORK ══ -->
+<section id="how-i-work">
+  <div style="text-align:center;margin-bottom:0">
+    <div class="ey c reveal">My Process</div>
+    <div class="sh sh-light reveal d1">HOW I <span class="accent-gv">Work</span></div>
+  </div>
+  <div class="hiw-grid">
+    <div class="hiw-step reveal d1"><div class="hiw-num">01</div><div class="hiw-icon">🔍</div><div class="hiw-title">Research</div><p class="hiw-desc">I understand your brand, audience, competitors and goals before touching content.</p></div>
+    <div class="hiw-step reveal d2"><div class="hiw-num">02</div><div class="hiw-icon">🗺️</div><div class="hiw-title">Strategize</div><p class="hiw-desc">I build the content direction, pillars, calendar and platform strategy.</p></div>
+    <div class="hiw-step reveal d3"><div class="hiw-num">03</div><div class="hiw-icon">✍️</div><div class="hiw-title">Create</div><p class="hiw-desc">Scripts, reels, carousels, captions, shoots and creative concepts.</p></div>
+    <div class="hiw-step reveal d1"><div class="hiw-num">04</div><div class="hiw-icon">📱</div><div class="hiw-title">Publish</div><p class="hiw-desc">Consistent execution across the right platforms at the right time.</p></div>
+    <div class="hiw-step reveal d2"><div class="hiw-num">05</div><div class="hiw-icon">📊</div><div class="hiw-title">Analyze</div><p class="hiw-desc">I track reach, engagement, saves, shares and audience behaviour — the full picture.</p></div>
+    <div class="hiw-step reveal d3"><div class="hiw-num">06</div><div class="hiw-icon">🔁</div><div class="hiw-title">Optimize</div><p class="hiw-desc">We keep doing more of what works — and stop wasting time on what doesn&apos;t.</p></div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ SELECTED WORK / PROJECTS ══ -->
+<section id="projects">
+  <div class="proj-hdr reveal">
+    <div class="ey c">Selected Work</div>
+    <div class="sh reveal d1" style="color:var(--dark)">REAL WORK <span class="accent-gv">&amp; Case Studies</span></div>
+    <p style="font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:300;color:var(--mu);margin-top:.5rem" class="reveal d2">Screenshots and proof from projects I have actually handled.</p>
+  </div>
+  <div class="work-case-grid">
+    <article class="work-case reveal d1">
+      <div class="work-case-media">
+        <div class="work-shot"><img src="assets/work/nextnation-instagram.webp" alt="NextNation Instagram page handled by Tisha" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/nextnation-bts.webp" alt="Behind the scenes of a NextNation content shoot" loading="lazy"></div>
+      </div>
+      <div class="work-case-body">
+        <div class="work-case-kicker">Social Media Intern · NextNation</div>
+        <div class="work-case-title">NextNation — End-to-End Social</div>
+        <p class="work-case-desc">Handled day-to-day social media execution, content shoots, campaign support and platform operations while also supporting lead coordination and performance tracking.</p>
+        <ul class="work-case-list">
+          <li>Instagram &amp; social media management</li><li>Video shooting &amp; on-camera content</li>
+          <li>Campaign support &amp; execution</li><li>Outdoor / on-site shoot execution</li>
+          <li>Manual BDE lead assignment in CRM</li><li>WhatsApp &amp; LinkedIn handling</li>
+          <li>Google Business reviews</li><li>Monthly ad-spend tracker</li>
+          <li>Social performance tracking</li><li>Analytics &amp; reporting</li>
+        </ul>
+      </div>
+    </article>
+    <article class="work-case reveal d2">
+      <div class="work-case-media">
+        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram Insights dashboard" loading="lazy"></div>
+        <div class="work-shot"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram performance proof" loading="lazy"></div>
+      </div>
+      <div class="work-case-body">
+        <div class="work-case-kicker">Sub-brand / Project · NextNation</div>
+        <div class="work-case-title">Tranzyt — Content Creation</div>
+        <p class="work-case-desc">Supported Tranzyt through content creation and social execution, helping turn ideas into scheduled, campaign-ready content and shoot support.</p>
+        <ul class="work-case-list">
+          <li>Content creation</li><li>Post ideas &amp; concepts</li>
+          <li>Content scheduling</li><li>Campaign support</li>
+          <li>Shoot support</li><li>Social media execution</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div class="proof-heading reveal">
+    <div class="ey c">Selected Proof</div>
+    <div class="sh" style="color:var(--dark)">SHOW THE <span class="accent-gv">Receipts</span></div>
+  </div>
+  <div class="proof-grid">
+    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/proof/my-performance-dashboard.webp" alt="Tisha social media performance dashboard showing 267,018 views" loading="lazy"></div><div class="proof-caption">My Performance Dashboard · 267K+ Views</div></div>
+    <div class="proof-card reveal d2"><div class="proof-media"><img src="assets/work/nextnation-instagram.webp" alt="NextNation Instagram page proof" loading="lazy"></div><div class="proof-caption">NextNation · Instagram Presence</div></div>
+    <div class="proof-card reveal d3"><div class="proof-media"><img src="assets/work/tranzyt-instagram-insights.webp" alt="Tranzyt Instagram Insights proof" loading="lazy"></div><div class="proof-caption">Tranzyt · Instagram Insights</div></div>
+    <div class="proof-card reveal d1"><div class="proof-media"><img src="assets/work/nextnation-bts.webp" alt="Behind the scenes content shoot setup" loading="lazy"></div><div class="proof-caption">Behind the Scenes · Shoot Execution</div></div>
+  </div>
+  <div class="proj-grid" id="projectsGrid" style="margin-top:4rem">
+    <!-- Additional projects rendered by JS from data array below -->
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ TOOLKIT ══ -->
+<section id="toolkit">
+  <div class="tk-hdr reveal">
+    <div class="ey c">My Toolkit</div>
+    <div class="sh sh-light reveal d1">THE TOOLS BEHIND <span class="accent-gv">the Work</span></div>
+  </div>
+  <div class="tk-categories">
+
+    <div class="reveal d1">
+      <div class="tk-cat-label">Social Platforms</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">📸</div><div class="tk-pill-name">Instagram</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">💼</div><div class="tk-pill-name">LinkedIn</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">👥</div><div class="tk-pill-name">Facebook</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📊</div><div class="tk-pill-name">Meta Business Suite</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d2">
+      <div class="tk-cat-label">Content &amp; Design</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">🎨</div><div class="tk-pill-name">Canva</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">✂️</div><div class="tk-pill-name">CapCut</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🎬</div><div class="tk-pill-name">VN</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🖼️</div><div class="tk-pill-name">Edits</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🔴</div><div class="tk-pill-name">Adobe Tools</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d1">
+      <div class="tk-cat-label">Google &amp; Workflow</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">📝</div><div class="tk-pill-name">Google Docs</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📊</div><div class="tk-pill-name">Google Sheets</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📁</div><div class="tk-pill-name">Google Drive</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📅</div><div class="tk-pill-name">Google Calendar</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">✉️</div><div class="tk-pill-name">Gmail</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d2">
+      <div class="tk-cat-label">Analytics</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">📈</div><div class="tk-pill-name">Google Analytics</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🔍</div><div class="tk-pill-name">Google Search Console</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📸</div><div class="tk-pill-name">Instagram Insights</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">💼</div><div class="tk-pill-name">LinkedIn Analytics</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d1">
+      <div class="tk-cat-label">Strategy &amp; Productivity</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">🗒️</div><div class="tk-pill-name">Notion</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🤖</div><div class="tk-pill-name">ChatGPT</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📆</div><div class="tk-pill-name">Content Calendar Systems</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📋</div><div class="tk-pill-name">Reporting &amp; Analytics</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d2">
+      <div class="tk-cat-label">Data</div>
+      <div class="tk-pills">
+        <div class="tk-pill"><div class="tk-pill-icon">📊</div><div class="tk-pill-name">Excel</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">📉</div><div class="tk-pill-name">Power BI</div></div>
+        <div class="tk-pill"><div class="tk-pill-icon">🗄️</div><div class="tk-pill-name">SQL</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ RESULTS ══ -->
+<section id="results">
+  <div class="results-hdr reveal">
+    <div class="ey c">Results</div>
+    <div class="sh reveal d1" style="color:var(--dark)">THE NUMBERS BEHIND <span class="accent-gv">the Work</span></div>
+  </div>
+  <div class="results-grid">
+    <div class="res-item reveal d1">
+      <span class="res-num">267K<span class="res-suf">+</span></span>
+      <span class="res-lbl">LinkedIn views</span>
+    </div>
+    <div class="res-item reveal d2">
+      <span class="res-num">10K<span class="res-suf">+</span></span>
+      <span class="res-lbl">LinkedIn profile visits</span>
+    </div>
+    <div class="res-item reveal d3">
+      <span class="res-num" style="font-size:1.3rem;line-height:1.3">0 → 1K</span>
+      <span class="res-lbl">Followers helped for LinkedIn pages</span>
+    </div>
+    <div class="res-item reveal d1">
+      <span class="res-num">20K<span class="res-suf">+</span></span>
+      <span class="res-lbl">Instagram followers grown organically</span>
+    </div>
+    <div class="res-item reveal d2">
+      <span class="res-num">100<span class="res-suf">+</span></span>
+      <span class="res-lbl">UGC videos delivered across brands &amp; industries</span>
+    </div>
+  </div>
+  <div class="results-proofline reveal d3"><span>0 → 800</span> LinkedIn page growth for Design Media &nbsp;•&nbsp; <span>5K → 20K+</span> organic Instagram growth &nbsp;•&nbsp; <span>100+</span> UGC videos delivered</div>
+  <p class="results-disclaimer reveal d3">Metrics shown are based on selected personal and client work.</p>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ WHY WORK WITH ME ══ -->
+<section id="why">
+  <div style="text-align:center">
+    <div class="ey c reveal">Why Work With Me?</div>
+    <div class="sh sh-light reveal d1">5 REASONS TO <span class="accent-gv">Choose Tisha</span></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal d1"><div class="why-num">01</div><div class="why-title">Strategy + Execution</div><p class="why-desc">I don&apos;t stop at content ideas. I can take an idea from research to publishing.</p></div>
+    <div class="why-card reveal d2"><div class="why-num">02</div><div class="why-title">Creative + Data</div><p class="why-desc">I care about aesthetics, but I also care about what the numbers are saying.</p></div>
+    <div class="why-card reveal d3"><div class="why-num">03</div><div class="why-title">Content-First</div><p class="why-desc">I can strategize, script, shoot, appear on camera and edit short-form content.</p></div>
+    <div class="why-card reveal d1"><div class="why-num">04</div><div class="why-title">Platform Aware</div><p class="why-desc">Instagram and LinkedIn need completely different strategies. I build accordingly.</p></div>
+    <div class="why-card reveal d2"><div class="why-num">05</div><div class="why-title">Business-Minded</div><p class="why-desc">The goal isn&apos;t simply more posts. It&apos;s stronger brand awareness, engagement and growth.</p></div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- Testimonials intentionally removed until genuine client feedback is uploaded. -->
+<div class="div"></div>
+
+<!-- ══ FINAL CTA ══ -->
+<section id="final-cta">
+  <div class="fcta-inner">
+    <div class="fcta-badge reveal">Open to Work &bull; Freelance &bull; Bengaluru &amp; Remote</div>
+    <div class="fcta-heading reveal d1">
+      HAVE A BRAND?<br>
+      BUILDING A BUSINESS?<br>
+      OR BUILDING <span class="fcta-accent">YOUR NAME?</span>
+    </div>
+    <p class="fcta-sub reveal d2">
+      Whether you&apos;re a founder building authority, a creator building an audience, a business ready to grow, or a brand ready to become impossible to ignore — I help turn your ideas into a clear online presence through strategy, content, social media and LinkedIn.
+    </p>
+    <div class="fcta-btns reveal d3">
+      <a href="#contact" class="btn-fill">Let&apos;s Work Together &rarr;</a>
+      <a href="#projects" class="btn-wire">View My Work &rarr;</a>
+    </div>
+    <div class="fcta-quote reveal d4">&ldquo; Strategy. Content. Growth. &rdquo;</div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="about-eyebrow reveal">Get In Touch</div>
+      <div class="contact-heading reveal d1">
+        LET&apos;S WORK<br><span class="accent">Together</span>
+      </div>
+      <p class="contact-body reveal d2">
+        Need a Social Media Manager, Content Strategist, Creator or LinkedIn Ghostwriter?<br>
+        Tell me what you&apos;re building — brand, business, founder profile or personal brand — and I&apos;ll help map the next move.
+      </p>
+      <div class="contact-links reveal d3">
+        <a href="mailto:tishadutta@example.com" class="contact-link-row"><div class="contact-link-ico">@</div>tishadutta@example.com</a>
+        <a href="https://www.linkedin.com/in/tisha-dutta-/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">in</div>linkedin.com/in/tishadutta</a>
+        <a href="https://www.instagram.com/tisha.dutta_/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="contact-link-row"><div class="contact-link-ico">ig</div>@tishadutta</a>
+      </div>
+    </div>
+
+    <div>
+      <!-- =====================================================
+           GOOGLE APPS SCRIPT CONFIGURATION
+           Replace the URL below with your actual Web App URL
+           after deploying the Apps Script (instructions below)
+      ===================================================== -->
+      <form id="contactForm" novalidate>
+        <!-- Honeypot (spam protection) -->
+        <input type="text" name="hp_field" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Name <span class="req">*</span></label>
+            <input type="text" name="name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email <span class="req">*</span></label>
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Brand / Company</label>
+          <input type="text" name="brand" class="form-input" placeholder="Your brand or company name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Instagram URL</label>
+            <input type="url" name="instagram" class="form-input" placeholder="instagram.com/yourbrand">
+          </div>
+          <div class="form-group">
+            <label class="form-label">LinkedIn URL</label>
+            <input type="url" name="linkedin" class="form-input" placeholder="linkedin.com/in/yourname">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Website</label>
+          <input type="url" name="website" class="form-input" placeholder="yourwebsite.com">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Service Required <span class="req">*</span></label>
+            <select name="service" class="form-input" required>
+              <option value="">Select a service</option>
+              <option>Social Media Management</option>
+              <option>Social Media Strategy</option>
+              <option>Content Creation</option>
+              <option>Reel Production</option>
+              <option>LinkedIn Ghostwriting</option>
+              <option>Personal Branding</option>
+              <option>Brand Strategy</option>
+              <option>Analytics &amp; Optimization</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Budget Range</label>
+            <select name="budget" class="form-input">
+              <option value="">Select budget</option>
+              <option>Under ₹5,000</option>
+              <option>₹5,000 – ₹10,000</option>
+              <option>₹10,000 – ₹20,000</option>
+              <option>₹20,000 – ₹50,000</option>
+              <option>₹50,000+</option>
+              <option>Let's Discuss</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Project Description <span class="req">*</span></label>
+          <textarea name="description" class="form-input" placeholder="Tell me about your brand, goals and what you need..." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Preferred Contact</label>
+            <select name="preferred_contact" class="form-input">
+              <option value="">Select preference</option>
+              <option>Email</option>
+              <option>WhatsApp</option>
+              <option>LinkedIn</option>
+              <option>Instagram</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Additional Information</label>
+            <input type="text" name="additional" class="form-input" placeholder="Anything else?">
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit" id="submitBtn">SEND BRIEF →</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <a href="#hero" class="footer-logo">Tisha <span>Dutta</span></a>
+  <div class="footer-tagline">Strategy. Content. Growth.</div>
+  <div class="footer-copy">&copy; 2025 Tisha Dutta &middot; Bengaluru, India</div>
+  <div class="social-row">
+    <a href="https://www.linkedin.com/in/tisha-dutta-/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="social-btn">in</a>
+    <a href="https://www.instagram.com/tisha.dutta_/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="social-btn">ig</a>
+    <a href="mailto:tishadutta@example.com" class="social-btn">@</a>
+  </div>
+</footer>
+
+<script>
+
+/* =====================================================
+   GOOGLE APPS SCRIPT CODE
+   ─────────────────────────────────────────────────────
+   Copy EVERYTHING between the lines below and paste it
+   into a new Google Apps Script project at script.google.com
+   ─────────────────────────────────────────────────────
+
+function doPost(e) {
+  try {
+    const SPREADSHEET_ID = "17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA";
+    const SHEET_NAME = "Form Responses";
+
+    const data = JSON.parse(e.postData.contents);
+
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    let sheet = ss.getSheetByName(SHEET_NAME);
+
+    // Create sheet with headers if it doesn't exist
+    if (!sheet) {
+      sheet = ss.insertSheet(SHEET_NAME);
+      sheet.appendRow([
+        "Timestamp",
+        "Name",
+        "Email",
+        "Brand / Company",
+        "Instagram URL",
+        "LinkedIn URL",
+        "Website",
+        "Service Required",
+        "Budget Range",
+        "Project Description",
+        "Preferred Contact",
+        "Additional Information"
+      ]);
+      sheet.getRange(1, 1, 1, 12).setFontWeight("bold");
+      sheet.setFrozenRows(1);
+    }
+
+    sheet.appendRow([
+      new Date().toISOString(),
+      data.name || "",
+      data.email || "",
+      data.brand || "",
+      data.instagram || "",
+      data.linkedin || "",
+      data.website || "",
+      data.service || "",
+      data.budget || "",
+      data.description || "",
+      data.contactMethod || "",
+      data.additional || ""
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput("Tisha Dutta Portfolio — Form endpoint is live.")
+    .setMimeType(ContentService.MimeType.TEXT);
+}
+
+   ─────────────────────────────────────────────────────
+   END OF APPS SCRIPT CODE
+   ===================================================== */
+
+/* =====================================================
+   GOOGLE APPS SCRIPT CONFIGURATION
+   ─────────────────────────────────────────────────────
+   Step 1: Create your Google Apps Script (code below)
+   Step 2: Deploy as Web App (Execute as: Me, Who has access: Anyone)
+   Step 3: Copy the Web App URL
+   Step 4: Paste it below replacing PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
+   ===================================================== */
+const GOOGLE_APPS_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxhr3wPWXJ3qPfR-dBLk30r42BTaAkGAeFBqRoYG9c8TuREh3Ve-FfLKiqD0VRY9JeX9A/exec";
+/* YOUR GOOGLE SHEET ID: 17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA
+   Sheet URL: https://docs.google.com/spreadsheets/d/17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA/edit
+   ─── HOW TO CONNECT ───────────────────────────────────────
+   1. Open Google Apps Script: https://script.google.com
+   2. Create new project → paste the Apps Script code below
+   3. In the script, the SPREADSHEET_ID is already set to your sheet:
+      const SPREADSHEET_ID = "17mhhcKiBwc2hirLVxVUN-M2jtC6Z9b5zdKduqNX2XmA";
+   4. Click Deploy → New Deployment → Web App
+      Execute as: Me | Who has access: Anyone
+   5. Copy the Web App URL and paste it above (replacing PASTE_YOUR...)
+   ─────────────────────────────────────────────────────── */
+
+/* =====================================================
+   PROJECTS DATA
+   ─────────────────────────────────────────────────────
+   Replace githubUrl values with your actual GitHub links.
+   Each project: { title, category, description, tags, githubUrl, status }
+   ===================================================== */
+const PROJECTS = [
+  {
+    title: "LinkedIn Personal Brand Growth",
+    category: "LinkedIn Strategy",
+    description: "Building a measurable social presence through consistent, strategy-led content and audience growth.",
+    tags: ["LinkedIn", "Personal Brand", "Content"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Personal Project"
+  },
+  {
+    title: "LOVESUNDAYS — Social Media",
+    category: "Social Media Management",
+    description: "Social media management, reels, carousels and content strategy for LOVESUNDAYS brand.",
+    tags: ["Social Media", "Reels", "Content Strategy"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Client Project"
+  },
+  {
+    title: "Diction Agency — Multi-Client",
+    category: "Social Media Management",
+    description: "Managing 3 active clients through Diction Agency — content planning, captions, creative direction and page management.",
+    tags: ["Agency", "Content", "Multi-Client"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Ongoing"
+  },
+  {
+    title: "GRK ADS — Content & Creative",
+    category: "Content Strategy",
+    description: "Content strategy, social media management, reel concepts and on-location shoots for GRK ADS projects.",
+    tags: ["Content Strategy", "Reels", "Creative"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Client Project"
+  },
+  {
+    title: "NextNation / Tranzyt — Social Media",
+    category: "Social Media & Content",
+    description: "End-to-end social media execution for NextNation, with content creation, shoots, campaigns, CRM lead coordination, platform management and performance tracking; plus content creation and scheduling for Tranzyt.",
+    tags: ["Social Media", "Content", "Campaigns", "Analytics"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Internship"
+  },
+  {
+    title: "Fashion Brand Social Relaunch",
+    category: "Content Creation",
+    description: "Fashion content, reels and shoot direction for boutique fashion brand projects.",
+    tags: ["Fashion", "Reels", "Shoot Direction"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Project"
+  },
+  {
+    title: "Founder LinkedIn Ghostwriting",
+    category: "LinkedIn Ghostwriting",
+    description: "Ghostwriting LinkedIn content for a founder — positioning, thought-leadership posts and audience growth strategy.",
+    tags: ["LinkedIn", "Ghostwriting", "Founder Brand"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Placeholder"
+  },
+  {
+    title: "30-Day Content System",
+    category: "Content Strategy",
+    description: "A structured 30-day content system built for a brand — pillars, calendar, scripts and formats.",
+    tags: ["Content System", "Strategy", "Calendar"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Placeholder"
+  },
+  {
+    title: "Content Performance Dashboard",
+    category: "Analytics",
+    description: "Analytics and performance dashboard tracking reach, engagement, saves and shares across platforms.",
+    tags: ["Analytics", "Power BI", "Reporting"],
+    githubUrl: "https://github.com/TishaDutta7",
+    status: "Placeholder"
+  }
+];
+
+/* ─── Render Projects ─── */
+function renderProjects() {
+  const grid = document.getElementById('projectsGrid');
+  if (!grid) return;
+  grid.innerHTML = PROJECTS.map((p, i) => `
+    <div class="proj-card reveal d${(i % 3) + 1}">
+      <div class="proj-thumb">
+        <div class="proj-thumb-in" style="background:linear-gradient(135deg,${['#1C0E07','#0E1610','#180E14','#1A1408','#0E1014','#18100E','#100E18','#0A1018','#140E0C'][i % 9]},var(--dark-3))">
+          ${p.title.slice(0,12)}
+        </div>
+      </div>
+      <div class="proj-meta">
+        ${p.status !== 'Placeholder' ? '' : '<span class="proj-status">Placeholder</span>'}
+        <div class="proj-cat">${p.category}</div>
+        <div class="proj-title">${p.title}</div>
+        <p class="proj-desc">${p.description}</p>
+        <div class="proj-tags">${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer"
+           class="proj-btn"
+           onclick="${p.githubUrl === 'https://github.com/TishaDutta7' ? 'event.preventDefault();alert(\'GitHub URL not set yet. Edit PROJECTS array in the script.\')' : ''}">
+          VIEW PROJECT →
+        </a>
+      </div>
+    </div>
+  `).join('');
+  /* re-observe new cards */
+  if (obs) grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
+
+/* ─── Cursor ─── */
+const C = document.getElementById('cursor');
+const R = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  C.style.left = (mx - 3.5) + 'px';
+  C.style.top  = (my - 3.5) + 'px';
+});
+(function loop() {
+  rx += (mx - rx) * 0.1;
+  ry += (my - ry) * 0.1;
+  R.style.left = rx + 'px';
+  R.style.top  = ry + 'px';
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a, button, .pf, .exp-card, .svc-card').forEach(el => {
+  el.addEventListener('mouseenter', () => { C.style.transform = 'scale(2.5)'; R.style.width = '40px'; R.style.height = '40px'; R.style.borderColor = 'rgba(184,134,90,.8)'; });
+  el.addEventListener('mouseleave', () => { C.style.transform = 'scale(1)'; R.style.width = '26px'; R.style.height = '26px'; R.style.borderColor = 'rgba(184,134,90,.55)'; });
+});
+
+/* ─── Scroll Reveal ─── */
+let obs;
+document.documentElement.classList.add('reveal-ready');
+if ('IntersectionObserver' in window) {
+  obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+/* ─── Smooth scroll ─── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+/* ─── Content portfolio filter ─── */
+document.querySelectorAll('.cp-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cp-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('#contentGrid .phone-wrap').forEach(card => {
+      const categories = (card.dataset.cat || '').split(/\s+/).filter(Boolean);
+      if (filter === 'all' || categories.includes(filter)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* ─── Default UGC view ─── */
+(function showUGCByDefault(){
+  document.querySelectorAll('#contentGrid .phone-wrap').forEach(card => {
+    const categories = (card.dataset.cat || '').split(/\s+/);
+    card.style.display = categories.includes('ugc') ? 'flex' : 'none';
+  });
+})();
+
+/* ─── Portfolio video playback ─── */
+const embeddedVideoFiles = {
+  1: 'tranzyt-vietnam.mp4',
+  2: 'tranzyt-travel-cost.mp4',
+  3: 'tranzyt-talking-head.mp4',
+  4: 'tranzyt-europe.mp4',
+  5: 'grk-ads-goal.mp4',
+  6: 'grk-ads-content-strategy.mp4',
+  7: 'nextnation.mp4',
+  8: 'grk-ads-offer.mp4'
+};
+
+/* Videos are embedded directly into this HTML file so they also work when
+   the portfolio is previewed from a file/library viewer without a /videos folder. */
+const videoData = {
+  1: "videos/tranzyt-vietnam.mp4",
+  2: "videos/tranzyt-travel-cost.mp4",
+  3: "videos/tranzyt-talking-head.mp4",
+  4: "videos/tranzyt-europe.mp4",
+  5: "videos/grk-ads-goal.mp4",
+  6: "videos/grk-ads-content-strategy.mp4",
+  7: "videos/nextnation.mp4",
+  8: "videos/grk-ads-offer.mp4"
+};
+
+Object.keys(videoData).forEach(n => {
+  const vid = document.getElementById('v' + n);
+  if (!vid) return;
+  vid.src = videoData[n];
+  vid.style.display = 'block';
+  vid.addEventListener('loadeddata', () => {
+    const ph = document.getElementById('ph' + n);
+    if (ph) ph.style.display = 'none';
+    vid.play().catch(() => {});
+  }, { once: true });
+  vid.load();
+});
+
+/* Play only when a card is visible; muted autoplay is allowed by modern browsers. */
+const videoObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const vid = entry.target;
+    const card = vid.closest('.pf');
+    if (entry.isIntersecting) {
+      vid.play().catch(() => {});
+    } else {
+      vid.pause();
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.portfolio-video').forEach(vid => {
+  const card = vid.closest('.pf');
+  const ready = () => card && card.classList.add('media-ready');
+  const fail = () => { if(card){ card.classList.remove('media-ready'); const t=card.querySelector('.p-ph-txt'); if(t)t.textContent='Video unavailable — please refresh'; } };
+  vid.addEventListener('loadeddata', ready, {once:true});
+  vid.addEventListener('canplay', ready);
+  vid.addEventListener('error', fail);
+  videoObserver.observe(vid);
+  vid.addEventListener('click', () => {
+    if (vid.paused) vid.play().catch(() => {});
+    else vid.pause();
+  });
+  vid.play().catch(() => {});
+});
+
+document.querySelectorAll('img').forEach(img => img.addEventListener('error', () => img.closest('.work-shot,.proof-media,.about-frame,.brand-cap-card')?.classList.add('media-error')));
+
+/* ─── Contact Form ─── */
+const form    = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formMsg   = document.getElementById('formMsg');
+
+function showMsg(type, text) {
+  formMsg.className = 'form-msg ' + type;
+  formMsg.style.display = 'block';
+  formMsg.textContent = text;
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  formMsg.style.display = 'none';
+
+  /* Honeypot check */
+  if (form.hp_field.value) return;
+
+  const name  = form.name.value.trim();
+  const email = form.email.value.trim();
+  const service = form.service.value;
+  const description = form.description.value.trim();
+
+  /* Validation */
+  if (!name) { showMsg('error', 'Please enter your name.'); return; }
+  if (!email || !validateEmail(email)) { showMsg('error', 'Please enter a valid email address.'); return; }
+  if (!service) { showMsg('error', 'Please select a service.'); return; }
+  if (!description) { showMsg('error', 'Please describe your project.'); return; }
+
+  /* Check URL configured */
+  if (GOOGLE_APPS_SCRIPT_WEB_APP_URL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+    showMsg('error', 'Form endpoint not configured yet. Please contact directly via email or LinkedIn.');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'SENDING...';
+
+  const payload = {
+    name,
+    email,
+    brand: form.brand.value.trim(),
+    instagram: form.instagram.value.trim(),
+    linkedin: form.linkedin.value.trim(),
+    website: form.website.value.trim(),
+    service,
+    budget: form.budget.value,
+    description,
+    preferred_contact: form.preferred_contact.value,
+    additional: form.additional.value.trim(),
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    const res = await fetch(GOOGLE_APPS_SCRIPT_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    form.reset();
+    showMsg('success', "Thank you! Your brief has been received. I\'ll get back to you soon.");
+  } catch (err) {
+    showMsg('error', 'Something went wrong. Please try again or contact me directly.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'SEND BRIEF →';
+  }
+});
+
+/* ─── Init ─── */
+renderProjects();
+</script>
+
+
+<!-- Portfolio proof assets: /assets/work/nextnation-instagram.webp, nextnation-bts.jpeg, tranzyt-instagram-insights.jpeg; /assets/proof/my-performance-dashboard.webp -->
+
+<script>
+window.addEventListener('error', function(){ document.documentElement.classList.remove('reveal-ready'); document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');}); });
+</script>
+</body>
+</html>
