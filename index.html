@@ -1143,13 +1143,58 @@ footer .footer-copy,
 footer .footer-tagline{color:rgba(243,238,229,.68)}
 
 /* FINAL GITHUB PAGES MEDIA HARDENING */
-.hero-luxury .hero-bg-photo{background-image:url("assets/portrait/hero-bg.jpg");background-repeat:no-repeat;}
-.hero-portrait{object-fit:contain;object-position:center bottom;}
-.hero-visual{min-height:100%;}
+.hero-luxury .hero-bg-photo{background-image:url("assets/portrait/tisha-dutta-2026.jpeg");background-repeat:no-repeat;background-position:76% 34%;}
+.hero-inner{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(2.5rem,5vw,5.5rem);}
+.hero-copy{width:100%;max-width:610px;justify-self:end;}
+.hero-visual{min-height:100%;align-items:center;padding:clamp(5rem,8vh,7rem) 0 4rem;}
+.hero-portrait-frame{
+  position:relative;width:min(100%,560px);aspect-ratio:1145/1373;
+  overflow:hidden;border:1px solid rgba(224,197,142,.28);
+  border-radius:260px 260px 18px 18px;
+  box-shadow:0 34px 90px rgba(0,0,0,.42);
+}
+.hero-portrait-frame::before{
+  content:"";position:absolute;inset:12px;z-index:4;pointer-events:none;
+  border:1px solid rgba(244,234,216,.16);border-radius:248px 248px 11px 11px;
+}
+.hero-portrait-frame .hero-portrait{
+  width:100%;height:100%;display:block;object-fit:cover;object-position:center;
+  mask-image:none;-webkit-mask-image:none;filter:saturate(.94) contrast(1.03) brightness(.94);
+}
+.hero-portrait-frame .hero-portrait-vignette{
+  background:linear-gradient(180deg,transparent 58%,rgba(11,8,7,.32) 100%);
+}
+#about{
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(3.5rem,7vw,7rem);
+  align-items:center;padding:7rem max(5vw,calc((100vw - 1280px)/2));
+}
+.about-text-col{width:100%;max-width:610px;justify-self:end;}
+.about-portrait-col{width:100%;display:flex;justify-content:center;}
+.about-frame{width:min(100%,560px);aspect-ratio:1145/1373;border-radius:260px 260px 18px 18px;}
+.about-frame img{object-fit:cover;object-position:center;}
+.about-frame::after{inset:12px;border-radius:248px 248px 11px 11px;}
+.about-badge{right:auto;left:50%;transform:translateX(-50%);white-space:nowrap;}
 img{max-width:100%;}
 .portfolio-video{background:#111;}
 .portfolio-video[poster]{background-size:cover;background-position:center;}
-@media(max-width:900px){.hero-portrait{object-fit:contain;object-position:center bottom;}}
+@media(max-width:1100px){
+  #about{grid-template-columns:1fr;gap:3.5rem;padding:5rem max(1.5rem,7vw);}
+  .about-text-col{max-width:760px;justify-self:center;}
+  .about-portrait-col{justify-self:center;}
+}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-copy{max-width:760px;justify-self:center;text-align:center;padding-bottom:2rem;}
+  .hero-luxury .hero-actions{justify-content:center;}
+  .hero-visual{min-height:auto;margin:0;padding:1rem 0 2.75rem;}
+  .hero-portrait-frame{width:min(100%,520px);}
+  .hero-luxury .hstat{text-align:center;}
+  .hero-luxury .hero-proof-strip{text-align:center;}
+}
+@media(max-width:600px){
+  .hero-portrait-frame,.about-frame{width:min(100%,430px);border-radius:210px 210px 14px 14px;}
+  .hero-portrait-frame::before,.about-frame::after{border-radius:198px 198px 9px 9px;}
+}
 </style>
 </head>
 <body>
@@ -1200,8 +1245,10 @@ img{max-width:100%;}
     </div>
     <div class="hero-visual" aria-label="Tisha Dutta portrait">
       <div class="hero-portrait-glow"></div>
-      <img src="assets/portrait/tisha-dutta.png" alt="Tisha Dutta" class="hero-portrait" fetchpriority="high" decoding="async">
-      <div class="hero-portrait-vignette"></div>
+      <div class="hero-portrait-frame">
+        <img src="assets/portrait/tisha-dutta-2026.jpeg" width="1145" height="1373" alt="Tisha Dutta" class="hero-portrait" fetchpriority="high" decoding="async">
+        <div class="hero-portrait-vignette"></div>
+      </div>
       <div class="hero-scroll">SCROLL <span>↓</span></div>
     </div>
   </div>
@@ -1267,9 +1314,9 @@ img{max-width:100%;}
       <span class="atag">Founder Branding</span>
     </div>
   </div>
-  <div class="reveal d2">
+  <div class="about-portrait-col reveal d2">
     <div class="about-frame">
-      <img src="assets/portrait/tisha-dutta.png" alt="Tisha Dutta — Social Media Manager and Content Strategist" loading="eager" decoding="async">
+      <img src="assets/portrait/tisha-dutta-about-2026.jpeg" width="1124" height="1404" alt="Tisha Dutta — Social Media Manager and Content Strategist" loading="lazy" decoding="async">
       <div class="about-badge">Available for Work</div>
     </div>
   </div>
@@ -2369,9 +2416,6 @@ window.addEventListener('error', function(){ document.documentElement.classList.
     img.addEventListener('error',()=>{
       const src=img.getAttribute('src')||'';
       if(src.endsWith('.webp')){ img.src=src.replace(/\.webp$/i,'.jpg'); }
-      else if(src.endsWith('.jpg')){ img.src=src.replace(/\.jpg$/i,'.webp'); }
-      else if(src.endsWith('.jpeg')){ img.src=src.replace(/\.jpeg$/i,'.jpg'); }
-      else if(src.endsWith('.png')){ img.src=src.replace(/\.png$/i,'.jpg'); }
     });
   });
 })();
